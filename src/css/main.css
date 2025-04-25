@@ -1,0 +1,5 @@
+body {
+  width: auto;
+  height: 100dvh;
+  cursor: url("../assets/icons/hammer.png"), auto;
+}
