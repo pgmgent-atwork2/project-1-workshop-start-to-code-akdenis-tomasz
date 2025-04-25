@@ -1,22 +1,29 @@
+@import url("./_home-page.css");
+@import url("./_scoreboard.css");
+
 /* MAIN STYLING */
+a,
+button,
+html {
+  cursor: url("../assets/icons/hammer.png"), auto;
+}
+
 body {
-    width: auto;
-    height: 100dvh;
-    cursor: url("../assets/icons/hammer.png"), auto;
-    transition: transform 0.1s;
+  width: auto;
+  height: 100dvh;
+  transition: transform 0.1s;
+}
+
+body.hammer-active {
+  cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
+}
+
+/* CURSOR STYLING */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  body.hammer-active {
-    cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
-    transform: translateZ(0) scale(1);
+  100% {
+    transform: rotate(-90deg);
   }
-  
-  /* CURSOR STYLING */
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-90deg);
-    }
-  }
+}

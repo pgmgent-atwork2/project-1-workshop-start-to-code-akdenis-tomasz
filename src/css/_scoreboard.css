@@ -1,0 +1,22 @@
+/* SCOREBOARD STYLING */
+.scoreboard {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .scoreboard h2 {
+    font-family: "Bungee", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .highScoresList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .highScoresList li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-family: monospace;
+  }
