@@ -3,3 +3,21 @@ body {
   height: 100dvh;
   cursor: url("../assets/icons/hammer.png"), auto;
 }
+
+.rotate-animation {
+  animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+.hole {
+  width: 256px;
+  height: auto;
+}
