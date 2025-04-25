@@ -20,6 +20,7 @@ let highScores = [
 // Function to render scores
 export function renderHighScores() {
   const highScoresList = document.getElementsByClassName("highScoresList");
+
   highScoresList.innerHTML = "";
   highScores
     .sort((a, b) => b.score - a.score)
