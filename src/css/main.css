@@ -1,23 +1,22 @@
+/* MAIN STYLING */
 body {
-  width: auto;
-  height: 100dvh;
-  cursor: url("../assets/icons/hammer.png"), auto;
-}
-
-.rotate-animation {
-  animation: rotate 0.5s ease-in-out;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
+    width: auto;
+    height: 100dvh;
+    cursor: url("../assets/icons/hammer.png"), auto;
+    transition: transform 0.1s;
   }
-  100% {
-    transform: rotate(-90deg);
+  
+  body.hammer-active {
+    cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
+    transform: translateZ(0) scale(1);
   }
-}
-
-.hole {
-  width: 256px;
-  height: auto;
-}
+  
+  /* CURSOR STYLING */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
