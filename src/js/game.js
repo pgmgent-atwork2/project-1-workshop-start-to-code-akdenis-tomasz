@@ -53,10 +53,20 @@ setTimeout(() => {
   clearInterval(myInterval);
 }, 18000);
 
+function updateScore(object, score) {
+  let html = `Score: ${score}`;
+  object.innerHTML = html;
+}
+
+let score = 0;
+
 function addEventListener() {
   const $beaver = document.querySelector(".beaver");
+  const $score = document.querySelector(".score");
 
   $beaver.addEventListener("click", function (event) {
     $beaver.classList.add("clicked");
+    score++;
+    updateScore($score, score);
   });
 }
