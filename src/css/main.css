@@ -18,11 +18,6 @@ body {
   }
 }
 
-.hole {
-  width: 256px;
-  height: auto;
-}
-
 .background {
   position: relative;
   height: 100%;
@@ -39,6 +34,15 @@ body {
   grid-template-columns: repeat(3, 30rem);
   grid-template-rows: 90px 190px 165px 180px;
   justify-items: center;
+  position: relative;
+}
+
+.grid .fullwidth {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .background__image {
@@ -58,11 +62,15 @@ body {
   grid-row: 1/2;
 }
 
-.hole {
-  background-color: black;
+.beaver {
+  background-color: rgb(209, 209, 209);
   width: 50px;
   height: 75px;
   align-self: end;
+}
+
+.beaver.clicked {
+  display: none;
 }
 
 .hole-a {
