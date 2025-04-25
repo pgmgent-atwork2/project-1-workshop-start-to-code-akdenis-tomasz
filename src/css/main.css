@@ -1,14 +1,26 @@
-@import url(_reset.css);
+
+@import url("./_reset.css");
+@import url("./_home-screen.css");
+@import url("./_scoreboard.css");
+
+/* MAIN STYLING */
+a,
+button,
+html {
+  cursor: url("../assets/icons/hammer.png"), auto;
+}
 
 body {
   width: auto;
   height: 100dvh;
+  transition: transform 0.1s;
 }
 
-.rotate-animation {
-  animation: rotate 0.5s ease-in-out;
+body.hammer-active {
+  cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
 }
 
+/* CURSOR STYLING */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
