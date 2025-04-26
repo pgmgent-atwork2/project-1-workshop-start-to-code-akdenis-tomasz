@@ -89,3 +89,9 @@
   grid-column: 3/4;
   grid-row: 4/5;
 }
+
+/* SCORE + TiME */
+.score,
+.time {
+  color: #0b0b0b;
+}

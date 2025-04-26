@@ -1,38 +1,58 @@
-export function getRandomNumber(min, max) {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+import "./_cursor.js";
+import { addHighScore, getPlayerRank } from "./_scoreboard.js";
+
+// --- GAME VARIABLES ---
+let score = 0;
+let timeLeft = 18; // Total game time in seconds
+
+const $timeDisplay = document.getElementById("time-remaining");
+const $scoreDisplay = document.querySelector(".score");
+
+// --- SCORE & BEAVER ---
+function updateScore() {
+  $scoreDisplay.innerHTML = `Score: ${score}`;
 }
 
-export function beaverSelection() {
+function addBeaverClickListener() {
+  const $beaver = document.querySelector(".beaver");
+  if ($beaver) {
+    $beaver.addEventListener("click", () => {
+      $beaver.classList.add("clicked");
+      score++;
+      updateScore();
+    });
+  }
+}
+
+function beaverSelection() {
   let beaverHTML = "";
-  switch (getRandomNumber(1, 9)) {
+  switch (getRandomNumber(1, 10)) { 
     case 1:
-      beaverHTML = "<button class='beaver hole-a' id='hole1'></button>";
+      beaverHTML = "<button class='beaver hole-a'></button>";
       break;
     case 2:
-      beaverHTML = "<button class='beaver hole-b' id='hole2'></button>";
+      beaverHTML = "<button class='beaver hole-b'></button>";
       break;
     case 3:
-      beaverHTML = "<button class='beaver hole-c' id='hole3'></button>";
+      beaverHTML = "<button class='beaver hole-c'></button>";
       break;
     case 4:
-      beaverHTML = "<button class='beaver hole-d' id='hole4'></button>";
+      beaverHTML = "<button class='beaver hole-d'></button>";
       break;
     case 5:
-      beaverHTML = "<button class='beaver hole-e' id='hole5'></button>";
+      beaverHTML = "<button class='beaver hole-e'></button>";
       break;
     case 6:
-      beaverHTML = "<button class='beaver hole-f' id='hole6'></button>";
+      beaverHTML = "<button class='beaver hole-f'></button>";
       break;
     case 7:
-      beaverHTML = "<button class='beaver hole-g' id='hole7'></button>";
+      beaverHTML = "<button class='beaver hole-g'></button>";
       break;
     case 8:
-      beaverHTML = "<button class='beaver hole-h' id='hole8'></button>";
+      beaverHTML = "<button class='beaver hole-h'></button>";
       break;
     case 9:
-      beaverHTML = "<button class='beaver hole-i' id='hole9'></button>";
+      beaverHTML = "<button class='beaver hole-i'></button>";
       break;
     default:
       beaverHTML = "";
@@ -40,33 +60,94 @@ export function beaverSelection() {
   return beaverHTML;
 }
 
-export function refreshHtml() {
+function refreshHtml() {
   const $gameContainer = document.querySelector(".fullwidth");
   $gameContainer.innerHTML = beaverSelection();
-
-  addEventListener();
+  addBeaverClickListener();
 }
 
-const myInterval = setInterval(refreshHtml, 1000);
+// --- GAME START ---
+const urlParams = new URLSearchParams(window.location.search);
+const countdownNeeded = urlParams.get("countdown") === "true";
 
-setTimeout(() => {
-  clearInterval(myInterval);
-}, 18000);
-
-function updateScore(object, score) {
-  let html = `Score: ${score}`;
-  object.innerHTML = html;
+if (countdownNeeded) {
+  startCountdown(startGame);
+} else {
+  startGame();
 }
 
-let score = 0;
+function startCountdown(callback) {
+  const $gameContainer = document.querySelector(".fullwidth");
+  let countdown = 3;
+  const countdownDisplay = document.createElement("div");
+  countdownDisplay.classList.add("countdown");
+  $gameContainer.appendChild(countdownDisplay);
 
-function addEventListener() {
-  const $beaver = document.querySelector(".beaver");
-  const $score = document.querySelector(".score");
+  const countdownInterval = setInterval(() => {
+    if (countdown > 0) {
+      countdownDisplay.textContent = countdown;
+      countdown--;
+    } else {
+      countdownDisplay.textContent = "GO!";
+      clearInterval(countdownInterval);
+      setTimeout(() => {
+        countdownDisplay.remove();
+        callback();
+      }, 1000);
+    }
+  }, 1000);
+}
 
-  $beaver.addEventListener("click", function (event) {
-    $beaver.classList.add("clicked");
-    score++;
-    updateScore($score, score);
+// --- GAME LOOP ---
+function startGame() {
+  score = 0;
+  timeLeft = 18;
+  updateScore();
+  if ($timeDisplay) $timeDisplay.textContent = timeLeft;
+
+  const gameInterval = setInterval(refreshHtml, 1000);
+  const timerInterval = setInterval(() => {
+    timeLeft--;
+    if ($timeDisplay) {
+      $timeDisplay.textContent = timeLeft;
+    }
+    if (timeLeft <= 0) {
+      endGame(gameInterval, timerInterval);
+    }
+  }, 1000);
+}
+
+function endGame(gameInterval, timerInterval) {
+  clearInterval(gameInterval);
+  clearInterval(timerInterval);
+
+  const modal = document.getElementById("score-modal");
+  const finalScore = document.getElementById("final-score");
+  const saveButton = document.getElementById("save-score");
+
+  finalScore.textContent = score;
+  modal.style.display = "flex";
+
+  const newSaveButton = saveButton.cloneNode(true);
+  saveButton.parentNode.replaceChild(newSaveButton, saveButton);
+
+  newSaveButton.addEventListener("click", () => {
+    const playerNameInput = document.getElementById("player-name");
+    let playerName = playerNameInput.value.trim().substring(0, 6);
+    if (playerName) {
+      const rank = getPlayerRank(score);
+      if (rank) {
+        alert(`Congrats! You’re ranked ${rank} out of 10!`);
+      }
+      addHighScore(playerName, score);
+      window.location.href = "scoreboard.html";
+    }
   });
+}
+
+// --- UTILS ---
+function getRandomNumber(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
