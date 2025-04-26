@@ -1,4 +1,4 @@
-/* HEADER */
+/* HOME SCREEN */
 .home-screen {
   position: fixed;
   top: 0;
@@ -34,13 +34,17 @@
   background-color: #ff9800;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
-.menu-buttons button:hover {
+.menu-buttons button:hover,
+.menu-buttons a:hover {
   background-color: #e65100;
+  transform: translateY(-2px); /* slight lift effect */
 }
 
+/* HEADER */
 .header {
   max-width: 87%;
   margin: 0 auto;
@@ -48,85 +52,31 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  // margin: 1rem 1rem 1rem 1rem;
+  padding: 1rem 0;
 }
 
 .title {
   font-family: "Bungee Spice", sans-serif;
+  font-size: 2rem;
 }
 
-.links {
+/* NAVIGATION */
+.nav__list {
   display: flex;
   gap: 1.25rem;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-link {
+.nav__list-item {
   font-family: "Bungee", cursive;
   color: #0b0b0b;
   font-size: 1.2rem;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
-=======
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffe0b2;
-    z-index: 1;
-  }
-  
-  .home-screen h2 {
-    font-family: "Bungee Spice", sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .menu-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .menu-buttons button {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #ff9800;
-    color: white;
-    transition: background-color 0.3s ease;
-  }
-  
-  .menu-buttons button:hover {
-    background-color: #e65100;
-  }
-  
-  .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 1rem 1rem 1rem;
-  }
-  
-  .title {
-    font-family: "Bungee Spice", sans-serif;
-  }
-  
-  .nav__list {
-    display: flex;
-    gap: 1.25rem;
-    list-style-type: none;
-  }
-  
-  .nav__list-item {
-    font-family: "Bungee", cursive;
-    color: #fff;
-    font-size: 1.2rem;
-  }
+
+.nav__list-item:hover {
+  color: #e65100;
+}
