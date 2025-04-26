@@ -2,88 +2,27 @@
 @import url("./_home-screen.css");
 @import url("./_scoreboard.css");
 @import url("./_game-screen.css");
+@import url("./_game.css");
 
-/* MAIN STYLING */
-a,
-button,
-html {
-  cursor: url("../assets/icons/hammer.png"), auto;
+/* MAIN STYLING*/
+a {
+  text-decoration: none;
 }
-
 body {
   width: auto;
   height: 100dvh;
   transition: transform 0.1s;
 }
 
-body.hammer-active {
+/* CURSOR STYLING */
+* {
+  cursor: url("../assets/icons/hammer.png"), auto;
+}
+
+html.hammer-active * {
   cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
 }
 
-/* CURSOR STYLING */
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-90deg);
-  }
-}
-
-.background {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-.background__container {
-  max-width: 90rem;
-  margin: 0 auto;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 30rem);
-  grid-template-rows: 90px 190px 165px 180px;
-  justify-items: center;
-  position: relative;
-}
-
-.grid .fullwidth {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
-.background__image {
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-  border: 7px solid gold;
-  border-radius: 10px;
-}
-
-.score {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
-.time {
-  grid-column: 3/4;
-  grid-row: 1/2;
-}
-
-.beaver {
-  background-color: rgb(209, 209, 209);
-  width: 50px;
-  height: 75px;
-  align-self: end;
-}
-
-.beaver.clicked {
-  display: none;
-}
 
 .hole-a {
   grid-column: 1/2;
@@ -120,4 +59,7 @@ body.hammer-active {
 .hole-i {
   grid-column: 3/4;
   grid-row: 4/5;
+}
+html.hammer-active {
+  cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
 }

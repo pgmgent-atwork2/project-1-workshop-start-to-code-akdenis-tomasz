@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whack-a-Mole</title>
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
     <!-- STYLING -->
     <link rel="stylesheet" href="../src/css/main.css" />
@@ -37,16 +37,49 @@
                 </div>
 
             </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <!-- STYLING -->
+    <link rel="stylesheet" href="../src/css/main.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="title"><a href="index.html">Whack A Beaver</a></h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="nav__list-item" id="game" href="game.html">Game</a></li>
+          <li>
+            <a class="nav__list-item" id="tutorial" href="tutorial.html"
+              >Tutorial</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="background" id="game">
+      <div class="background__container">
+        <div class="grid game-container">
+          <img
+            class="background__image"
+            src="../src/assets/images/bg_game.png"
+            alt=""
+          />
+          <div class="score">Score: 0</div>
+          <div class="time">Time: 60s</div>
+
+          <div class="grid fullwidth"></div>
+
         </div>
+      </div>
     </main>
 
-    <div id="tutorial">
-
-
-    </div>
-
+    <div id="tutorial"></div>
 
     <footer>Gemaakt door Tomasz en Akdenis &copy 2025</footer>
+
 
     <script type="module" src="../src/js/main.js"></script>
 </body>

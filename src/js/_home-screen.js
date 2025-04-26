@@ -1,9 +1,6 @@
-// main.js or a separate _home-page.js
-const homeScreen = document.querySelector(".home-screen");
-const gameSection = document.querySelector("#game-link");
-const tutorialSection = document.querySelector("#tutorial-link");
 const startGameButton = document.getElementById("startGameButton");
 const tutorialButton = document.getElementById("tutorialButton");
+
 
 // if (startGameButton) {
 //   startGameButton.addEventListener("click", () => {
@@ -18,3 +15,11 @@ if (tutorialButton) {
     tutorialSection.style.display = "block";
   });
 }
+startGameButton.addEventListener("click", () => {
+  window.location.href = "game.html";
+});
+
+tutorialButton.addEventListener("click", () => {
+  window.location.href = "tutorial.html";
+});
+
