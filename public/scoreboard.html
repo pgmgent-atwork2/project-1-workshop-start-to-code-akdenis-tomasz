@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack-a-Beaver</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <!-- STYLING -->
+    <link rel="stylesheet" href="../src/css/main.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="title"><a href="index.html">Whack A Beaver</a></h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="nav__list-item" id="game" href="game.html">Game</a></li>
+          <li>
+            <a class="nav__list-item" id="tutorial" href="tutorial.html"
+              >Tutorial</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- LEADERBOARD -->
+    <section class="scoreboard">
+        <h2>High Scores</h2>
+        <table class="leaderboard">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody class="highScoresList"></tbody>
+        </table>
+      
+        <div class="scoreboard-buttons">
+          <button id="restart-btn">Restart</button>
+          <button id="exit-btn">Exit</button>
+          <button id="tutorial-btn">Tutorial</button>
+        </div>
+      </section>
+      
+
+    <footer>Gemaakt door Tomasz en Akdenis &copy 2025</footer>
+
+    <script src="../src/js/scoreboard.js" type="module"></script>
+  </body>
+</html>

@@ -1,35 +1,72 @@
-// Sample local scores (replace this with actual fetch from DB later)
-const scoreDisplay = document.getElementsByClassName("score");
+const highScoresKey = "highScores";
 
-let score = 0;
+// LocalStorage
+let highScores = JSON.parse(localStorage.getItem(highScoresKey)) || [];
 
-export function handleBeaverClick() {
-  if (!gameOver) {
-    score++;
-    scoreDisplay.textContent = `Score: ${score}`;
-  }
-  this.classList.remove("beaver");
+function saveHighScores() {
+  localStorage.setItem(highScoresKey, JSON.stringify(highScores));
 }
 
-let highScores = [
-  { name: "Tom", score: 20 },
-  { name: "Ann", score: 18 },
-  { name: "Bob", score: 15 },
-];
-
-// Function to render scores
 export function renderHighScores() {
-  const highScoresList = document.getElementsByClassName("highScoresList");
+  const highScoresList = document.querySelector(".highScoresList");
+  if (!highScoresList) return;
 
   highScoresList.innerHTML = "";
+
+  function getRankSuffix(rank) {
+    if (rank === 1) return "1st";
+    if (rank === 2) return "2nd";
+    if (rank === 3) return "3rd";
+    return `${rank}th`;
+  }
+
+  // Get top 10
   highScores
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
-    .forEach((score) => {
-      const li = document.createElement("li");
-      li.textContent = `${score.name.padEnd(6, " ")} - ${score.score}`;
-      highScoresList.appendChild(li);
+    .forEach((entry, index) => {
+      const tr = document.createElement("tr");
+
+      const rankCell = document.createElement("td");
+      rankCell.textContent = getRankSuffix(index + 1);
+
+      const nameCell = document.createElement("td");
+      nameCell.textContent = entry.name;
+
+      const scoreCell = document.createElement("td");
+      scoreCell.textContent = entry.score;
+
+      tr.appendChild(rankCell);
+      tr.appendChild(nameCell);
+      tr.appendChild(scoreCell);
+
+      highScoresList.appendChild(tr);
     });
 }
 
-renderHighScores();
+export function getPlayerRank(score) {
+  const allScores = [...highScores, { name: "temp", score }];
+  allScores.sort((a, b) => b.score - a.score);
+  const rank = allScores.findIndex((entry) => entry.score === score) + 1;
+  return rank <= 10 ? rank : null;
+}
+
+// Add a new score
+export function addHighScore(name, score) {
+  const playerName = name.substring(0, 6).toUpperCase();
+
+  const existingIndex = highScores.findIndex(
+    (entry) => entry.name === playerName
+  );
+
+  if (existingIndex >= 0) {
+    if (score > highScores[existingIndex].score) {
+      highScores[existingIndex].score = score;
+    }
+  } else {
+    highScores.push({ name: playerName, score });
+  }
+
+  saveHighScores();
+  renderHighScores();
+}
