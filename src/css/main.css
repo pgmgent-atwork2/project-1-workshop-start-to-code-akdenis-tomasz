@@ -8,9 +8,15 @@ a {
   text-decoration: none;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: 100dvh;
   transition: transform 0.1s;
+  background-color: #000000;
+  color: #fff;
 }
 
 /* CURSOR STYLING */
@@ -24,4 +30,10 @@ html.hammer-active * {
 
 html.hammer-active {
   cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
+}
+
+/* FOOTER */
+footer {
+  color: white;
+  padding: 0.5rem 1rem;
 }
