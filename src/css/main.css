@@ -1,6 +1,7 @@
 @import url("./_reset.css");
 @import url("./_home-screen.css");
 @import url("./_scoreboard.css");
+@import url("./_game-screen.css");
 @import url("./_game.css");
 
 /* MAIN STYLING*/
@@ -28,6 +29,43 @@ html.hammer-active * {
   cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
 }
 
+
+.hole-a {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.hole-b {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.hole-c {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.hole-d {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.hole-e {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.hole-f {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.hole-g {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.hole-h {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.hole-i {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
 html.hammer-active {
   cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
 }
