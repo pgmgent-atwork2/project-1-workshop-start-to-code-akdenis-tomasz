@@ -16,21 +16,55 @@
   </head>
   <body>
 
-    <!--  START POPUP SCREEN  -->
-    <section class="home-screen">
-      <h2>Welcome to Whack-A-Beaver!</h2>
-      <div class="menu-buttons">
-        <button id="startGameButton">Start Game</button>
-        <button id="tutorialButton">Tutorial</button>
-      </div>
-    </section>
 
-    <!-- SCOREBOARD -->
-    <section class="scoreboard">
-      <h2>High Scores</h2>
-      <ul class="highScoresList"></ul>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whack-a-Beaver</title>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
+  <!-- STYLING -->
+  <link rel="stylesheet" href="../src/css/main.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="title" href="index.html">Whack A Beaver</h1>
+    <nav>
+      <ul class="links">
+        <li><a class="nav-link" href="game.html">Game</a></li>
+        <li><a class="nav-link" href="tutorial.html">Tutorial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--  START POPUP SCREEN  -->
+  <section class="home-screen">
+    <h2>Welcome to Whack-A-Beaver!</h2>
+    <div class="menu-buttons">
+      <a id="startGameButton" href="game.html">Start Game</a>
+      <button id="tutorialButton">Tutorial</button>
+    </div>
+  </section>
+
+  <!-- SCOREBOARD -->
+  <section class="scoreboard">
+    <h2>High Scores</h2>
+    <ul class="highScoresList"></ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>Gemaakt door Tomasz en Akdenis &copy 2025</footer>
+
+  <script src="../src/js/main.js" type="module"></script>
+</body>
+
+</html>
 
     <script src="../src/js/main.js" type="module"></script>
   </body>
 </html>
+
