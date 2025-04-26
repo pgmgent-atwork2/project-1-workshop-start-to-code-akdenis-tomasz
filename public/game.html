@@ -5,16 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whack-a-Mole</title>
-
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
+    <!-- STYLING -->
     <link rel="stylesheet" href="../src/css/main.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__list-item" id="game" href="#">Game</li>
-                <li class="nav__list-item" id="tutorial" href="#">Tutorial</li>
+    <header class="header">
+        <h1 class="title" href="index.html">Whack A Beaver</h1>
+        <nav>
+            <ul class="links">
+                <li><a class="nav-link" href="game.html">Game</a></li>
+                <li><a class="nav-link" href="tutorial.html">Tutorial</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +30,7 @@
             <div class="grid game-container">
                 <img class="background__image" src="../src/assets/images/bg_game.png" alt="">
                 <div class="score">Score: 0</div>
-                <div class="time">Time: 60s</div>
+                <div class="time"></div>
 
                 <div class="grid fullwidth">
 
@@ -43,7 +48,7 @@
 
     <footer>Gemaakt door Tomasz en Akdenis &copy 2025</footer>
 
-    <script src="../src/js/game.js" type="module"></script>
+    <script type="module" src="../src/js/main.js"></script>
 </body>
 
 </html>
