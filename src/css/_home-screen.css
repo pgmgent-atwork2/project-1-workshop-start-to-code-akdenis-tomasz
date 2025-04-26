@@ -51,16 +51,15 @@
     font-family: "Bungee Spice", sans-serif;
   }
   
-  .links {
+  .nav__list {
     display: flex;
     gap: 1.25rem;
     list-style-type: none;
   }
   
-  .nav-link {
+  .nav__list-item {
     font-family: "Bungee", cursive;
     color: #0b0b0b;
     font-size: 1.2rem;
-    text-decoration: none;
   }
   
