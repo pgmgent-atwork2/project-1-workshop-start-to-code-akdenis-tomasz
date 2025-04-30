@@ -3,6 +3,7 @@
 @import url("./_scoreboard.css");
 @import url("./_game-screen.css");
 @import url("./_game.css");
+@import url("./tutorial.css");
 
 /* MAIN STYLING*/
 a {
@@ -15,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   width: auto;
-  height: 100dvh;
+  // height: 100dvh;
   transition: transform 0.1s;
   background-color: #000000;
   color: #fff;

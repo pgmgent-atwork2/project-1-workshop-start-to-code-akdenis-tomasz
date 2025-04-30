@@ -1,40 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whack-a-Beaver</title>
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
-      rel="stylesheet"
-    />
-    <!-- STYLING -->
-    <link rel="stylesheet" href="../src/css/main.css" />
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <h1 class="title"><a href="index.html">Whack A Beaver</a></h1>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a class="nav__list-item" id="game" href="game.html">Game</a></li>
-          <li>
-            <a class="nav__list-item" id="tutorial" href="tutorial.html"
-              >Tutorial</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <h2>Tutorial</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-      quibusdam dignissimos vitae odit ratione exercitationem a quaerat.
-      Exercitationem sint sunt deleniti cupiditate hic, eum obcaecati ex
-      laborum, cumque vel expedita.
-    </p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whack-a-Beaver - Tutorial</title>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
+  <!-- STYLING -->
+  <link rel="stylesheet" href="../src/css/main.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="title"><a href="index.html">Whack A Beaver</a></h1>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a class="nav__list-item" id="game" href="game.html">Game</a></li>
+        <li>
+          <a class="nav__list-item" id="tutorial" href="tutorial.html">Tutorial</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Een introductie tot het programmeren met het bouwen van een klein spel!</h2>
+      <p>
+        We gaan een spel maken waarbij de gebruiker via de muis, bevers zal moeten aanklikken en zo punten te scoren.
+        Zo ga je punten scoren, en kan je het openen tegen vrienden of familie!
+      </p>
+      <!-- <img src="image" alt=""> -->
+      <p>Hiervoor gaan we 3 codetalen gebruiken</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <p>Klaar om een nieuwe wereld te ontdekken?</p>
+    </section>
+
+    <section>
+      <strong>Stap 1 - Mappenstructuur</strong>
+      <p>Om deze applicatie te bouwen gaan we een tool gebruiken: <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener noreferrer">Visual Studio Code</a><br>
+        Je kan deze downloaden van de bovenstaande link</p>
+      <ul>
+        <li><span>1.1</span>
+          Hier kan je de bronbestanden vinden!
+          <!-- <a href="#">Download bronbestanden</a> -->
+        </li>
+        <li><span>1.2</span>
+          Open het programma Visual Studio Code. en open de folder die je zopas aangemaakt hebt.
+          <!-- <img src="" alt=""> -->
+        </li>
+        <li><span>1.3</span>
+          Installeer de live server extensie in Visual Studio Code; die ziet er zo uit:
+          <!-- <img src="" alt=""> -->
+        </li>
+        <li><span>1.4</span>
+          Je kan nu de LiveServer starten door met je rechter muisknop te klikken op "index.html" en vervolgens "Open with live server" te kiezen.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <strong>Stap 2 - HTML en CSS</strong>
+      <p>Tijd om ons spel mooi te maken en ons canvas een likje "code-verf" te geven, zodat we meer zien dan enkel een witte pagina.</p>
+      <ul>
+        <li>
+          <span>2.1</span>
+          Kopieer onderstaande code in jouw index.html-bestand. Bewaar vervolgens dat bestand.
+          <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
+                Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          Dit is de basis-structuur waar we op zullen verder werken.
+        </li>
+        <li>
+          <span>2.2</span>
+          In onze css folder maken we een nieuwe file aan genaamd "_home-screen.css". <br>
+          In deze file zetten we de volgende code
+          <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="qEEXwKM" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/qEEXwKM">
+                Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          Dit zal een aantal basisstijlen bevatten waardoor we al een eerste glimps krijgen van hoe het eruit zal zien.
+        </li>
+        <li><span>2.3</span>
+          Als je het resultaat nu bekijkt zou het er zo moeten uitzien:
+          <!-- <img src="" alt=""> -->
+        </li>
+        <li><span>2.3</span>
+          Laten we nu ook de knoppen veranderen om verder te gaan naar het effectieve spel.
+          <p class="codepen" data-height="300" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
+                Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          <strong>Proficiat</strong> je eerste werkende pagina is klaar!
+        </li>
+        <li><span>2.4</span>
+          Hier kunnen we ook nog een klein effectje aan de knoppen toevoegen.
+          <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
+                Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <strong>We zullen nu de game pagina maken!</strong>
+      <p>Voor de game pagina hebben we enkele onderdelen nodig om erin te zetten: <br>
+        Zoals de achtergrond, de gaten en de bevers! Laten we areen beginnen.</p>
+      <ul>
+        <li><span>3.1</span>
+          <p>
+            Aller eerst moet je een nieuw HTML bestand aanmaken.
+            Dat doe je door je public filder te selecteren, rechter muisklik en "new file" aan te klikken.
+          </p>
+          <img src="../src/assets/images/game-new-file.jpg" alt="">
+          <p>
+            Nu, deze gemaakt is kunnen we verder!
+          </p>
+        </li>
+        <li><span>3.2</span>
+          <p>In dit bestand moet je alvast enkele dingen toevoegen. Kopieer alvast deze code in dit bestand.</p>
+          <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
+                Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          <p>Zoals je kan zien, begint elke webpagina bijna altijd hetzelfde.</p>
+        </li>
+        <li><span>3.3</span>
+
+        </li>
+        <li><span>3.4</span>
+
+        </li>
+        <li><span>3.5</span>
+
+        </li>
+        <li><span>3.6</span>
+
+        </li>
+        <li><span>3.7</span>
+
+        </li>
+        <li><span>3.8</span>
+
+        </li>
+      </ul>
+    </section>
+
+  </main>
+</body>
+
 </html>
