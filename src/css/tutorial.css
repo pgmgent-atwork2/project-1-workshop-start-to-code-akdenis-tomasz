@@ -1,0 +1,51 @@
+.container-85 {
+  font-family: "Bungee", cursive;
+  width: 90%;
+  max-width: 68rem;
+}
+
+.list {
+  margin: 1rem 0;
+}
+
+.list__item {
+  padding-bottom: 0.5rem;
+}
+
+.last {
+  margin-bottom: 1.5rem;
+}
+
+.page-introduction {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.chapter-container {
+  margin-bottom: 1.5rem;
+}
+
+.chapter {
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.chapter-step {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.chapter-info {
+  padding-left: 1rem;
+}
+
+.chapter-info.first {
+  margin-bottom: 0.5rem;
+}
+
+.codepen {
+  width: 80%;
+  margin: 1.5rem auto;
+}
