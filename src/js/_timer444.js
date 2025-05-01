@@ -1,4 +1,4 @@
-let sec = 60;
+let sec = 18;
 export function timer() {
   document.querySelector(".time").innerHTML = "Time: " + sec;
   const timer = setInterval(function () {
