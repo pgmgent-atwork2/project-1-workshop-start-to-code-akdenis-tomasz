@@ -398,28 +398,101 @@
       <p>Volgende deeltje is tevens ook het moeilijkste! We gaan beginnen aan de functionaliteit van heel het spel. Hiervoor gaan we de codetaal JavaScript gebruiken.</p>
       <ul>
         <li><span>5.1</span>
-
+          <p>We maken verschillende nieuwe bestanden aan in onze js folder. Hier maken we de volgende bestanden aan:
+          </p>
+          <ul>
+            <li>"_cursor.js"</li>
+            <li>"_home-screen.js"</li>
+            <li>"_scoreboard.js"</li>
+            <li>"_timer.js"</li>
+            <li>"game.js"</li>
+            <li>"scoreboard.js"</li>
+          </ul>
+          <img src="../src/assets/images/js-files.jpg" alt="">
         </li>
         <li><span>5.2</span>
-
+          <p>In "_cursor.js" zetten we volgende code</p>
+          <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="pvvpmOe" data-pen-title="game-cursor" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/pvvpmOe">
+                game-cursor</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          <p>
+            Deze code zal ervoor zorgen dat als we op onze mol of bever slaan, het hamertje naar beneden zal gaan. <br>
+            Om het heel gemakkelijk te stellen, zijn het eigenlijk twee foto's van een verschillende positie van een hamertje. <br>
+            Met het drukken op de knop zal het spel weten dat het moet veranderen van foto.
+          </p>
         </li>
         <li><span>5.3</span>
-
+          <p>Het volgende dat belangrijk is, is dat onze koppen op de homescreen een soort functionaliteit hebben. Namelijk een "click eventListener". <br>
+            Deze zal reageren wanneer er geklikt zal zijn op een van de knoppen. Kopieer deze code in het "_home-screen.js" bestand.
+          </p>
+          <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="emmywoo" data-pen-title="homescr-buttons" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/emmywoo">
+                homescr-buttons</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          <p>Op de eerste twee lijnen code halen we een element op vanuit het DOM, dit is u webpagina.</p>
+          <p>We moeten deze ophalen, zodat we iets met de elementen kunnen doen; zoals bv een click eventListener toevoegen.</p>
         </li>
         <li><span>5.4</span>
-
+          <p>We zullen nu overgaan naar het spel zelf! <br>
+            Je mag deze code plakken in het "game.js" bestand.</p>
+          <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="YPPYmEr" data-pen-title="game-js-1" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/YPPYmEr">
+                game-js-1</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          <p>We maken variablen aan met daarin informatie dat de code kan onthouden. (const , let) <br>
+            Je mag dit vergelijken met een schuifje in een kast met daarin een iets dat moet onthouden worden. <br>
+            Het programma zal hierin kijken, en weten wat erin zit.</p>
+          <p>We maken ook een "click eventListener" weer aan zodat we de bevers kunnen aanklikken. <br>
+            Deze zal er voor zorgen dat de bever verdwijnt na het aanklikken, de score verhogen met 1 en de score ook verversen met de nieuwe score, als je juist hebt geklikt uiteraard. </p>
         </li>
         <li><span>5.5</span>
-
+          <p>In het volgende deel code, maken we een switch-case en een functie aan.</p>
+          <p> Wat is een functie? Wel een functie is zoals een instructiekaartje. Stel je voor dat je telkens weer iets opnieuw moet doen, moet je dit maar 1 keer opschrijven en kan je de functie zelf meerdere keren oproepen. </p>
+          <p>En een switch-case daarintegen? Wel dit is een soort van keuzemenu. Doordat we een functie aanmaken dat een willekeurig nummer aanmaakt en doorgeeft aan de switch-case, we ook een andere situatie doorkrijgen. Zo kunnen we de mol/bever op verschillende plaatsen laten verschijnen op het spelbord.</p>
+          <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="XJJVvGj" data-pen-title="game-js-switch" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/XJJVvGj">
+                game-js-switch</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          <p>Op het einde staat er ook een functie die onze inhoud van de webpagina ververst die we later in de code zullen aanroepen</p>
         </li>
         <li><span>5.6</span>
-
+          <p>Nu moeten we nog nog de gameloop starten. We maken weer variablen aan en maken enkele functies aan.</p>
+          <p>We moeten ervoor zorgen dat de speler een startschot krijgt voor zijn spel. Dus we maken hier een Timer die naar beneden zal tellen van 3.</p>
+          <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="XJJZmWY" data-pen-title="game-js-gamestart" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/XJJZmWY">
+                game-js-gamestart</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
         </li>
         <li><span>5.7</span>
+          <p>Bij de start van het spel moet je score 0 zijn en de hoeveelheid tijd moet ook al ingesteld zijn.</p>
+          <p>In het volgende stuk code stellen we onze score gelijk aan 0 en maken we een timer die ons, in dit geval, 18sec zal geven.</p>
+          <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="emmVpyP" data-pen-title="game-js-startgm" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/emmVpyP">
+                game-js-startgm</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
 
         </li>
         <li><span>5.8</span>
-
+          <p>Nadat onze tijd is afgelopen, en we een heleboel mollen of bevers hoofdpijn hebben bezorgd, moet er een scherm tevoorschijn komen waar we onze score in kunnen geven. Daarna moet het scorebord op het scherm verschijnen.</p>
+          <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="jEEZbex" data-pen-title="game-js-endgm" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/lopi5639/pen/jEEZbex">
+                game-js-endgm</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://public.codepenassets.com/embed/index.js"></script>
         </li>
         <li><span>5.9</span>
 
