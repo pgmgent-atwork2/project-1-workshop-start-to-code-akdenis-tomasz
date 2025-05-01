@@ -29,6 +29,19 @@
   display: inline-block;
   font-size: 2rem;
   margin-bottom: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+}
+
+.chapter__image {
+  width: 100%;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.small {
+  width: fit-content;
 }
 
 .chapter-step {
