@@ -131,11 +131,11 @@
           <p class="chapter-info">Als je de webpagina bekijkt, zie je dat er niets is verandert. Dat komt omdat we het CSS bestand nog moeten vasthangen aan de html. </p>
           <p class="chapter-info last">Dit doen we door door volgende code te plakken onder de fonts</p>
           <pre>
-            <code>
-              &lt;link rel=&quot;stylesheet&quot; href=&quot;../src/css/main.css&quot; /&gt;
-          </code>
-        </pre>
-          <img class=" chapter__image" src="../src/assets/images/index-end.jpg" alt="">
+              <code>
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;../src/css/main.css&quot; /&gt;
+            </code>
+          </pre>
+          <img class="chapter__image" src="../src/assets/images/index-end.jpg" alt="">
         </li>
         <li class="list__item"><span class="chapter-step">2.7</span>
           <p class="chapter-info">Je pagina zou er zo moeten uitzien momenteel.</p>
@@ -251,7 +251,7 @@
           <p class="chapter-info">In dit stukje zullen we het uitzicht van de game onder de loep nemen. <br>
             Daarvoor moeten we een nieuw bestand toevoegen in de css folder.</p>
           <p class="chapter-info">Deze zal de naam krijgen "game.css"</p>
-          <p class="chapter-info">In je "main.css" bestand zal je die ook moeten importeren door: "@import url("./game.css");" toe te voegen. </p>
+          <p class="chapter-info">In je "main.css" bestand zal je die ook moeten importeren door: "<span class="enhance">@import url("./game.css");</span>" toe te voegen. </p>
           <img class="chapter__image small" src="../src/assets/images/import.jpg" alt="">
           <p class="chapter-info last">Nu kunnen we het beginnen stylen.</p>
         </li>
@@ -304,6 +304,7 @@
             </p>
             <script async src="https://public.codepenassets.com/embed/index.js"></script>
           </div>
+          <p class="chapter-info last">In de CSS kan je zien dat er een lijn code staat voor "<span class="enhance">background-image: url("../assets/images/beaver.gif");</span>". Als je wil mag je deze lijn code vervangen door een eigen foto of gif. Let wel op dat het pad klopt</p>
         </li>
         <li class="list__item"><span class="chapter-step">3.13</span>
           <p class="chapter-info">Nu nog een belangrijk detail: we moeten het grid gelijkstellen aan de gaten waar de bever uit zal komen. <br>
@@ -680,6 +681,8 @@
         </li>
       </ul>
     </section>
+
+    <strong class="end">Veel plezier met spelen!</strong>
 
   </main>
 </body>
