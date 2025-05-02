@@ -1,651 +1,1932 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack-a-Beaver - Tutorial</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <!-- STYLING -->
+    <link rel="stylesheet" href="../src/css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Whack-a-Beaver - Tutorial</title>
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
-  <!-- STYLING -->
-  <link rel="stylesheet" href="../src/css/main.css" />
-</head>
-
-<body>
-  <!-- HEADER -->
-  <header class="header">
-    <h1 class="title"><a href="index.html">Whack A Beaver</a></h1>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li><a class="nav__list-item" id="game" href="game.html">Game</a></li>
-        <li>
-          <a class="nav__list-item" id="tutorial" href="tutorial.html">Tutorial</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="container-85">
-    <section class="chapter-container">
-      <h2 class="page-introduction">Een introductie tot het programmeren met het bouwen van een klein spel!</h2>
-      <p>
-        We gaan een spel maken waarbij de gebruiker via de muis, bevers zal moeten aanklikken en zo punten te scoren.
-        Zo ga je punten scoren, en kan je het openen tegen vrienden of familie!
-      </p>
-      <!-- <img src="image" alt=""> -->
-      <p>Hiervoor gaan we 3 codetalen gebruiken</p>
-      <ul class="list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-      <p>Klaar om een nieuwe wereld te ontdekken?</p>
-    </section>
-
-    <section class="chapter-container">
-      <strong class="chapter">Stap 1 - Mappenstructuur</strong>
-      <p>Om deze applicatie te bouwen gaan we een tool gebruiken: <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener noreferrer">Visual Studio Code</a><br>
-        Je kan deze downloaden van de bovenstaande link</p>
-      <ul class="list">
-        <li class="list__item"><span>1.1</span>
-          Hier kan je de bronbestanden vinden!
-          <!-- <a href="#">Download bronbestanden</a> -->
-        </li>
-        <li class="list__item"><span>1.2</span>
-          Open het programma Visual Studio Code. en open de folder die je zopas aangemaakt hebt.
-          <!-- <img src="" alt=""> -->
-        </li>
-        <li class="list__item"><span>1.3</span>
-          Installeer de live server extensie in Visual Studio Code; die ziet er zo uit:
-          <!-- <img src="" alt=""> -->
-        </li>
-        <li class="list__item"><span>1.4</span>
-          Je kan nu de LiveServer starten door met je rechter muisknop te klikken op "index.html" en vervolgens "Open with live server" te kiezen.
-        </li>
-      </ul>
-    </section>
-
-    <section class="chapter-container">
-      <strong class="chapter">Stap 2 - HTML en CSS</strong>
-      <p class="chapter-info first">Tijd om ons spel mooi te maken en ons canvas een likje "code-verf" te geven, zodat we meer zien dan enkel een witte pagina.</p>
-      <ul class="list">
-        <li class="list__item">
-          <span class="chapter-step">2.1</span>
-          <p class="chapter-info">Kopieer onderstaande code in jouw index.html-bestand. Bewaar vervolgens dat bestand.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Dit is de basis-structuur waar we op zullen verder werken.</p>
-        </li>
-        <li class="list__item">
-          <span class="chapter-step">2.2</span>
-          <p class="chapter-info">
-            In onze css folder maken we een nieuwe file aan genaamd "_home-screen.css". <br>
-            In deze file zetten we de volgende code
-          </p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="qEEXwKM" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/qEEXwKM">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info">Dit zal een aantal basisstijlen bevatten waardoor we al een eerste glimps krijgen van hoe het eruit zal zien.</p>
-        </li>
-        <p class="chapter-info last">
-          Als je het resultaat nu bekijkt zou het er zo moeten uitzien:
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="title"><a href="../index.html">Whack A Beaver</a></h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li>
+            <a class="nav__list-item" id="game" href="./game.html">Game</a>
+          </li>
+          <li>
+            <a class="nav__list-item" id="tutorial" href="./tutorial.html"
+              >Tutorial</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container-85">
+      <section class="chapter-container">
+        <h2 class="page-introduction">
+          Een introductie tot het programmeren met het bouwen van een klein
+          spel!
+        </h2>
+        <p>
+          We gaan een spel maken waarbij de gebruiker via de muis, bevers zal
+          moeten aanklikken en zo punten te scoren. Zo ga je punten scoren, en
+          kan je het openen tegen vrienden of familie!
         </p>
-        <!-- <img src="" alt=""> -->
-        <li class="list__item"><span class="chapter-step">2.3</span>
-          <p class="chapter-info">Laten we nu ook de knoppen veranderen om verder te gaan naar het effectieve spel.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info"><strong class="chapter-step">Proficiat</strong> je eerste werkende pagina is klaar!</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">2.4</span>
-          <p class="chapter-info">Hier kunnen we ook nog een klein effectje aan de knoppen toevoegen.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-      </ul>
-    </section>
+        <!-- <img src="image" alt=""> -->
+        <p>Hiervoor gaan we 3 codetalen gebruiken</p>
+        <ul class="list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <p>Klaar om een nieuwe wereld te ontdekken?</p>
+      </section>
 
-    <section class="chapter-container">
-      <strong class="chapter">Stap 3 - We zullen nu de game pagina maken!</strong>
-      <p class="chapter-info">Voor de game pagina hebben we enkele onderdelen nodig om erin te zetten: <br>
-        Zoals de achtergrond, de gaten en de bevers! Laten we areen beginnen.</p>
-      <ul class="list">
-        <li class="list__item"><span class="chapter-step">3.1</span>
-          <p class="chapter-info">
-            Aller eerst moet je een nieuw HTML bestand aanmaken.
-            Dat doe je door je public filder te selecteren, rechter muisklik en "new file" aan te klikken.
-          </p>
-          <img class="chapter__image" src="../src/assets/images/game-new-file.jpg" alt="">
+      <section class="chapter-container">
+        <strong class="chapter">Stap 1 - Mappenstructuur</strong>
+        <p>
+          Om deze applicatie te bouwen gaan we een tool gebruiken:
+          <a
+            href="https://code.visualstudio.com/Download"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visual Studio Code</a
+          ><br />
+          Je kan deze downloaden van de bovenstaande link
+        </p>
+        <ul class="list">
+          <li class="list__item">
+            <span>1.1</span>
+            Hier kan je de bronbestanden vinden!
+            <!-- <a href="#">Download bronbestanden</a> -->
+          </li>
+          <li class="list__item">
+            <span>1.2</span>
+            Open het programma Visual Studio Code. en open de folder die je
+            zopas aangemaakt hebt.
+            <!-- <img src="" alt=""> -->
+          </li>
+          <li class="list__item">
+            <span>1.3</span>
+            Installeer de live server extensie in Visual Studio Code; die ziet
+            er zo uit:
+            <!-- <img src="" alt=""> -->
+          </li>
+          <li class="list__item">
+            <span>1.4</span>
+            Je kan nu de LiveServer starten door met je rechter muisknop te
+            klikken op "index.html" en vervolgens "Open with live server" te
+            kiezen.
+          </li>
+        </ul>
+      </section>
+
+      <section class="chapter-container">
+        <strong class="chapter">Stap 2 - HTML en CSS</strong>
+        <p class="chapter-info first">
+          Tijd om ons spel mooi te maken en ons canvas een likje "code-verf" te
+          geven, zodat we meer zien dan enkel een witte pagina.
+        </p>
+        <ul class="list">
+          <li class="list__item">
+            <span class="chapter-step">2.1</span>
+            <p class="chapter-info">
+              Kopieer onderstaande code in jouw index.html-bestand. Bewaar
+              vervolgens dat bestand.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="MYYvRqv"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Dit is de basis-structuur waar we op zullen verder werken.
+            </p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">2.2</span>
+            <p class="chapter-info">
+              In onze css folder maken we een nieuwe file aan genaamd
+              "_home-screen.css". <br />
+              In deze file zetten we de volgende code
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="qEEXwKM"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/qEEXwKM">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info">
+              Dit zal een aantal basisstijlen bevatten waardoor we al een eerste
+              glimps krijgen van hoe het eruit zal zien.
+            </p>
+          </li>
           <p class="chapter-info last">
-            Nu, deze gemaakt is kunnen we verder!
+            Als je het resultaat nu bekijkt zou het er zo moeten uitzien:
           </p>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.2</span>
-          <p class="chapter-info">In dit bestand moet je alvast enkele dingen toevoegen. Kopieer alvast deze code in dit bestand.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="pvvdYZq" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/pvvdYZq">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          <!-- <img src="" alt=""> -->
+          <li class="list__item">
+            <span class="chapter-step">2.3</span>
+            <p class="chapter-info">
+              Laten we nu ook de knoppen veranderen om verder te gaan naar het
+              effectieve spel.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Zoals je kan zien, begint elke webpagina bijna altijd hetzelfde.</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.3</span>
-          <p class="chapter-info">We zullen nu de gamepagina voorzien van een navigatie, speelbord, score en timer, zodat iedereen zijn score kan zien en de hoeveelheid tijd die ze nog hebben om op de bevers te klikken.</p>
-          <p class="chapter-info">
-            Je kan de volgende code kopiëren in je bestand. <br>
-            De lijn "Hier komt code" mag je verwijderen en vervangen met het volgende snippet code.
-          </p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="KwwyEBr" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/KwwyEBr">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-slug-hash="MYYvRqv"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info">
+              <strong class="chapter-step">Proficiat</strong> je eerste werkende
+              pagina is klaar!
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Ziezo! Hier heb je een navigatie element teogevoegd. Deze zit nog een in een &lt;header&gt; </p>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.4</span>
-          <p class="chapter-info">Nu hebben we een navigatie op onze gamepagina.</p>
-          <p class="chapter-info">Volgende stap zal het toevoegen zijn van het spelbord. Je hebt deze files al gedownload in het begin. De prent die we gebruiken voor het spelbord zal dan ook in de images folder zitten. <br>
-            Deze moeten we nu ook nog toevoegen aan onze pagina. <br>
-            Voeg dit stukje code mee in je code onder de laatste &lt;/header&gt; tag
-          </p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="jEEaJpe" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/jEEaJpe">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">2.4</span>
+            <p class="chapter-info">
+              Hier kunnen we ook nog een klein effectje aan de knoppen
+              toevoegen.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Nadat je deze code hebt toegevoegd zal je ook een "Timer" en een "Score" moeten maken. Deze zullen we in de volgene stap maken.</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.5</span>
-          <p class="chapter-info">In deze stap zullen we de "Timer" en de "Score" maken. Vervang de comment "Hier komt de timer en score" met volgende code.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="wBBPOxm" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/wBBPOxm">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="MYYvRqv"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="chapter-container">
+        <strong class="chapter"
+          >Stap 3 - We zullen nu de game pagina maken!</strong
+        >
+        <p class="chapter-info">
+          Voor de game pagina hebben we enkele onderdelen nodig om erin te
+          zetten: <br />
+          Zoals de achtergrond, de gaten en de bevers! Laten we areen beginnen.
+        </p>
+        <ul class="list">
+          <li class="list__item">
+            <span class="chapter-step">3.1</span>
+            <p class="chapter-info">
+              Aller eerst moet je een nieuw HTML bestand aanmaken. Dat doe je
+              door je public filder te selecteren, rechter muisklik en "new
+              file" aan te klikken.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.6</span>
-          <p class="chapter-info">Normaal zou je nu ongeveer dit moeten hebben:</p>
-          <img class="chapter__image" src="../src/assets/images/game-bord.jpg" alt="">
-        </li>
-        <li class="list__item"><span class="chapter-step">3.7</span>
-          <p class="chapter-info">Je bent goed onderweg! <br>
-            In de volgende stap zullen we het uitzicht van de game aanpakken.
-          </p>
-          <p class="chapter-info">
-            We moeten een lijn code toevoegen aan ons bestand en een nieuw bestand aanmaken in de css map <br>
-            Zet de volgende code onder de comment "Styling".
-          </p>
-          <pre>
+            <img
+              class="chapter__image"
+              src="../src/assets/images/game-new-file.jpg"
+              alt=""
+            />
+            <p class="chapter-info last">
+              Nu, deze gemaakt is kunnen we verder!
+            </p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.2</span>
+            <p class="chapter-info">
+              In dit bestand moet je alvast enkele dingen toevoegen. Kopieer
+              alvast deze code in dit bestand.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="html"
+                data-slug-hash="pvvdYZq"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/pvvdYZq">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Zoals je kan zien, begint elke webpagina bijna altijd hetzelfde.
+            </p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.3</span>
+            <p class="chapter-info">
+              We zullen nu de gamepagina voorzien van een navigatie, speelbord,
+              score en timer, zodat iedereen zijn score kan zien en de
+              hoeveelheid tijd die ze nog hebben om op de bevers te klikken.
+            </p>
+            <p class="chapter-info">
+              Je kan de volgende code kopiëren in je bestand. <br />
+              De lijn "Hier komt code" mag je verwijderen en vervangen met het
+              volgende snippet code.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="html"
+                data-slug-hash="KwwyEBr"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/KwwyEBr">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Ziezo! Hier heb je een navigatie element teogevoegd. Deze zit nog
+              een in een &lt;header&gt;
+            </p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.4</span>
+            <p class="chapter-info">
+              Nu hebben we een navigatie op onze gamepagina.
+            </p>
+            <p class="chapter-info">
+              Volgende stap zal het toevoegen zijn van het spelbord. Je hebt
+              deze files al gedownload in het begin. De prent die we gebruiken
+              voor het spelbord zal dan ook in de images folder zitten. <br />
+              Deze moeten we nu ook nog toevoegen aan onze pagina. <br />
+              Voeg dit stukje code mee in je code onder de laatste
+              &lt;/header&gt; tag
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="html"
+                data-slug-hash="jEEaJpe"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/jEEaJpe">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Nadat je deze code hebt toegevoegd zal je ook een "Timer" en een
+              "Score" moeten maken. Deze zullen we in de volgene stap maken.
+            </p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.5</span>
+            <p class="chapter-info">
+              In deze stap zullen we de "Timer" en de "Score" maken. Vervang de
+              comment "Hier komt de timer en score" met volgende code.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="html"
+                data-slug-hash="wBBPOxm"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/wBBPOxm">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.6</span>
+            <p class="chapter-info">
+              Normaal zou je nu ongeveer dit moeten hebben:
+            </p>
+            <img
+              class="chapter__image"
+              src="../src/assets/images/game-bord.jpg"
+              alt=""
+            />
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.7</span>
+            <p class="chapter-info">
+              Je bent goed onderweg! <br />
+              In de volgende stap zullen we het uitzicht van de game aanpakken.
+            </p>
+            <p class="chapter-info">
+              We moeten een lijn code toevoegen aan ons bestand en een nieuw
+              bestand aanmaken in de css map <br />
+              Zet de volgende code onder de comment "Styling".
+            </p>
+            <pre>
             <code class="code">
               &lt;link rel=&quot;stylesheet&quot; href=&quot;../src/css/main.css&quot; /&gt;
           </code>
         </pre>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.8</span>
-          <p><strong class="chapter">Styling!</strong></p>
-          <p class="chapter-info">In dit stukje zullen we het uitzicht van de game onder de loep nemen. <br>
-            Daarvoor moeten we een nieuw bestand toevoegen in de css folder.</p>
-          <p class="chapter-info">Deze zal de naam krijgen "_game.css"</p>
-          <p class="chapter-info">In je "main.css" bestand zal je die ook moeten importeren door: "@import url("./_game.css");" toe te voegen. </p>
-          <img class="chapter__image small" src="../src/assets/images/import.jpg" alt="">
-          <p class="chapter-info last">Nu kunnen we het beginnen stylen.</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.9</span>
-          <p class="chapter-info">We zullen beginnen met ons speelveld een hoogte en breedte te geven.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.8</span>
+            <p><strong class="chapter">Styling!</strong></p>
+            <p class="chapter-info">
+              In dit stukje zullen we het uitzicht van de game onder de loep
+              nemen. <br />
+              Daarvoor moeten we een nieuw bestand toevoegen in de css folder.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.10</span>
-          <p class="chapter-info">Nu zullen we ons speelbord opstellen; eveneens zullen we de achtergrond op de juiste grootte zetten.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="qEEXwKM" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/qEEXwKM">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="chapter-info">Deze zal de naam krijgen "_game.css"</p>
+            <p class="chapter-info">
+              In je "main.css" bestand zal je die ook moeten importeren door:
+              "@import url("./_game.css");" toe te voegen.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Wat we hier hebben gedaan, is het volgende: <br>
-            <br>
-            We hebben van ons speelveld een grid gemaakt. Dit grid hebben we voorzien van rijen en kolommen van een bepaalde grootte. De artikelen die erin komen, hebben we gecentreerd en onderaan uitgelijnd. De achtergrond hebben we verspreid over heel het grid, zodat de bevers uit de gaten kunnen komen.
+            <img
+              class="chapter__image small"
+              src="../src/assets/images/import.jpg"
+              alt=""
+            />
+            <p class="chapter-info last">Nu kunnen we het beginnen stylen.</p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.9</span>
+            <p class="chapter-info">
+              We zullen beginnen met ons speelveld een hoogte en breedte te
+              geven.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="MYYvRqv"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.10</span>
+            <p class="chapter-info">
+              Nu zullen we ons speelbord opstellen; eveneens zullen we de
+              achtergrond op de juiste grootte zetten.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="qEEXwKM"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/qEEXwKM">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Wat we hier hebben gedaan, is het volgende: <br />
+              <br />
+              We hebben van ons speelveld een grid gemaakt. Dit grid hebben we
+              voorzien van rijen en kolommen van een bepaalde grootte. De
+              artikelen die erin komen, hebben we gecentreerd en onderaan
+              uitgelijnd. De achtergrond hebben we verspreid over heel het grid,
+              zodat de bevers uit de gaten kunnen komen.
+            </p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.11</span>
+            <p class="chapter-info">
+              Het volgende dat mooi gemaakt moet worden is de score en de tijd!
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="RNNjzvg"
+                data-pen-title="game-css-time/score"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/RNNjzvg">
+                    game-css-time/score</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <p class="chapter-info last">
+            We hebben hier het lettertype aangepast, alsook de positie in het
+            grid, en een kleine kopruimte gegeven.
           </p>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.11</span>
-          <p class="chapter-info">Het volgende dat mooi gemaakt moet worden is de score en de tijd!</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="RNNjzvg" data-pen-title="game-css-time/score" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/RNNjzvg">
-                  game-css-time/score</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          <li class="list__item">
+            <span class="chapter-step">3.12</span>
+            <p class="chapter-info">
+              Nu moeten we de bever nog een correcte grootte geven en hem juist
+              positioneren! Voor later moeten we hem ook een extra waarde
+              toedienen. <br />
+              De waarde zal ervoor zorgen, als we straks de functionaliteit
+              doen, dat als de bever wordt aangeklikt deze ook verdwijnt.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <p class="chapter-info last">We hebben hier het lettertype aangepast, alsook de positie in het grid, en een kleine kopruimte gegeven.</p>
-        <li class="list__item"><span class="chapter-step">3.12</span>
-          <p class="chapter-info">Nu moeten we de bever nog een correcte grootte geven en hem juist positioneren! Voor later moeten we hem ook een extra waarde toedienen. <br>
-            De waarde zal ervoor zorgen, als we straks de functionaliteit doen, dat als de bever wordt aangeklikt deze ook verdwijnt.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="pvvpoqG" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/pvvpoqG">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="pvvpoqG"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/pvvpoqG">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.13</span>
+            <p class="chapter-info">
+              Nu nog een belangrijk detail: we moeten het grid gelijkstellen aan
+              de gaten waar de bever uit zal komen. <br />
+              Dit gaan we doen door het grid aan te passen en elk vak een
+              bepaalde grootte en breedte te geven.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.13</span>
-          <p class="chapter-info">Nu nog een belangrijk detail: we moeten het grid gelijkstellen aan de gaten waar de bever uit zal komen. <br>
-            Dit gaan we doen door het grid aan te passen en elk vak een bepaalde grootte en breedte te geven.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="KwwZKYJ" data-pen-title="game-css-grid/holes" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/KwwZKYJ">
-                  game-css-grid/holes</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="KwwZKYJ"
+                data-pen-title="game-css-grid/holes"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/KwwZKYJ">
+                    game-css-grid/holes</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">3.12</span>
+            <p class="chapter-info">
+              Je spelbord zou er momenteel zo moeten uitzien
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">3.12</span>
-          <p class="chapter-info">Je spelbord zou er momenteel zo moeten uitzien</p>
-          <img class="chapter__image" src="../src/assets/images/game-bord-final.jpg" alt="">
-          <p class="chapter-info last chapter">Mooi zo!</p>
-        </li>
-      </ul>
-    </section>
+            <img
+              class="chapter__image"
+              src="../src/assets/images/game-bord-final.jpg"
+              alt=""
+            />
+            <p class="chapter-info last chapter">Mooi zo!</p>
+          </li>
+        </ul>
+      </section>
 
-    <section class="chapter-container">
-      <strong class="chapter">Stap 4 - Het scorebord</strong>
-      <p>Hier in dit stukje gaan we ons focussen op het maken van het score bord!</p>
-      <ul class="list">
-        <li class="list__item"><span class="chapter-step">4.1</span>
-          <p class="chapter-info">Zoals in de vorige stappen, beginnen we eerst met het aanmaken van onze DOCTYPE.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="GggyZrb" data-pen-title="scoreb-html/start" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/GggyZrb">
-                  scoreb-html/start</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+      <section class="chapter-container">
+        <strong class="chapter">Stap 4 - Het scorebord</strong>
+        <p>
+          Hier in dit stukje gaan we ons focussen op het maken van het score
+          bord!
+        </p>
+        <ul class="list">
+          <li class="list__item">
+            <span class="chapter-step">4.1</span>
+            <p class="chapter-info">
+              Zoals in de vorige stappen, beginnen we eerst met het aanmaken van
+              onze DOCTYPE.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.2</span>
-          <p class="chapter-info">Net zoals de andere pagina's heeft deze ook een navigatie nodig, zodat we altijd terug kunnen naar een andere pagina.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="yyypQjx" data-pen-title="score-nav" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/yyypQjx">
-                  score-nav</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="html"
+                data-slug-hash="GggyZrb"
+                data-pen-title="scoreb-html/start"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/GggyZrb">
+                    scoreb-html/start</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.2</span>
+            <p class="chapter-info">
+              Net zoals de andere pagina's heeft deze ook een navigatie nodig,
+              zodat we altijd terug kunnen naar een andere pagina.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.3</span>
-          <p class="chapter-info">Nu moeten we deze pagina vullen met informatie om een scorebord te maken.</p>
-          <p class="chapter-info">De volgende code zal ervoor zorgen dat je een tabel hebt met rijen waar je "Positie", "Naam" en "Score" kan terug vinden.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="NPPXemZ" data-pen-title="score-layout" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/NPPXemZ">
-                  score-layout</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="html"
+                data-slug-hash="yyypQjx"
+                data-pen-title="score-nav"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/yyypQjx">
+                    score-nav</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.3</span>
+            <p class="chapter-info">
+              Nu moeten we deze pagina vullen met informatie om een scorebord te
+              maken.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.4</span>
-          <p class="chapter-info">Nu moeten we nog de knoppen aanmaken waarmee je het spel kan herstarten of sluiten. We hebben hier ook een knop toegevoegd om naar deze tutorial te gaan.</p>
-          <p class="chapter-info">Je mag nu de blauwe comment verwijderen en in de plaats daarvan deze code kopiëren.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="MYYrLWe" data-pen-title="score-btns" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYrLWe">
-                  score-btns</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="chapter-info">
+              De volgende code zal ervoor zorgen dat je een tabel hebt met rijen
+              waar je "Positie", "Naam" en "Score" kan terug vinden.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last"><strong>Ziezo! Dit zou moeten volstaan voor de elementen van het scorebord.</strong></p>
-        </li>
-        <li class="list__item">
-          <p class="chapter-info nostyle">We zullen dit scorebord nog stylen, en dan kunnen we aan de functionaliteit beginnen van heel het spel. Want momenteel hebben we enkel <br>
-            een mooi spelbord, maar alle functionaliteit die een spel een spel maakt, zit er nog niet in.</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.5</span>
-          <p class="chapter-info">We zullen beginnen met ons document te connecteren met het CSS bestand. Voeg de volgende lijn code bij onder de comment "Styling"</p>
-          <pre>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="html"
+                data-slug-hash="NPPXemZ"
+                data-pen-title="score-layout"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/NPPXemZ">
+                    score-layout</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.4</span>
+            <p class="chapter-info">
+              Nu moeten we nog de knoppen aanmaken waarmee je het spel kan
+              herstarten of sluiten. We hebben hier ook een knop toegevoegd om
+              naar deze tutorial te gaan.
+            </p>
+            <p class="chapter-info">
+              Je mag nu de blauwe comment verwijderen en in de plaats daarvan
+              deze code kopiëren.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="html"
+                data-slug-hash="MYYrLWe"
+                data-pen-title="score-btns"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/MYYrLWe">
+                    score-btns</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              <strong
+                >Ziezo! Dit zou moeten volstaan voor de elementen van het
+                scorebord.</strong
+              >
+            </p>
+          </li>
+          <li class="list__item">
+            <p class="chapter-info nostyle">
+              We zullen dit scorebord nog stylen, en dan kunnen we aan de
+              functionaliteit beginnen van heel het spel. Want momenteel hebben
+              we enkel <br />
+              een mooi spelbord, maar alle functionaliteit die een spel een spel
+              maakt, zit er nog niet in.
+            </p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.5</span>
+            <p class="chapter-info">
+              We zullen beginnen met ons document te connecteren met het CSS
+              bestand. Voeg de volgende lijn code bij onder de comment "Styling"
+            </p>
+            <pre>
             <code>
             &lt;link rel=&quot;stylesheet&quot; href=&quot;../src/css/main.css&quot; /&gt;
           </code>
         </pre>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.6</span>
-          <p class="chapter-info">Nu maken we een nieuw bestand aan in de CSS folder met de naam: "_scoreboard.css"</p>
-          <img class="chapter__image small" src="../src/assets/images/score-board.jpg" alt="">
-        </li>
-        <li class="list__item"><span class="chapter-step">4.7</span>
-          <p class="chapter-info">Om te beginnen geven we een grootte aans ons scorebord en stellen we het font in. Deze code mag je toevoegen aan het nieuwe aangemaakte bestand. <br>
-            We stellen ook in hoe onze lijstelementen eruit zullen zien.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="jEEYJNw" data-pen-title="score-css/layout" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/jEEYJNw">
-                  score-css/layout</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.6</span>
+            <p class="chapter-info">
+              Nu maken we een nieuw bestand aan in de CSS folder met de naam:
+              "_scoreboard.css"
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.8</span>
-          <p class="chapter-info">We maken ook alvast een styling aan voor onze start timer. Deze zal van 3 naar 0 tellen en zal in het javascript gedeelte aangemaakt worden. <br>
-            Maar het is goed om deze al te maken.
-          </p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="KwwZEVy" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/KwwZEVy">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <img
+              class="chapter__image small"
+              src="../src/assets/images/score-board.jpg"
+              alt=""
+            />
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.7</span>
+            <p class="chapter-info">
+              Om te beginnen geven we een grootte aans ons scorebord en stellen
+              we het font in. Deze code mag je toevoegen aan het nieuwe
+              aangemaakte bestand. <br />
+              We stellen ook in hoe onze lijstelementen eruit zullen zien.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.9</span>
-          <p class="chapter-info">Nu zullen we een styling maken voor het venster dat zal verschijnen na het spel is afgelopen. Hier zullen we onze scoren aan kunnen toevoegen.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="dPPJrNb" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/dPPJrNb">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="jEEYJNw"
+                data-pen-title="score-css/layout"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/jEEYJNw">
+                    score-css/layout</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.8</span>
+            <p class="chapter-info">
+              We maken ook alvast een styling aan voor onze start timer. Deze
+              zal van 3 naar 0 tellen en zal in het javascript gedeelte
+              aangemaakt worden. <br />
+              Maar het is goed om deze al te maken.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.10</span>
-          <p class="chapter-info">Dit zal een iets langer stukje code zijn. Maar deze code heeft allemaal te maken met hoe de elementen binnen in het venster, waar je je score kan ingeven, eruit zullen zien.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="yyypwMj" data-pen-title="score-modal/inputs" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/yyypwMj">
-                  score-modal/inputs</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="KwwZEVy"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/KwwZEVy">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.9</span>
+            <p class="chapter-info">
+              Nu zullen we een styling maken voor het venster dat zal
+              verschijnen na het spel is afgelopen. Hier zullen we onze scoren
+              aan kunnen toevoegen.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Deze code zorgt er ook voor dat onze knoppen zullen reageren als je erover gaat met de muis. Met het :hover pseudo-element zorgen we er dus voor dat de achtergrondkleur verandert en het iets groter zal worden.</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.11</span>
-          <p class="chapter-info">We maken nu ook een animatie aan, zodat we het scherm zien verschijnen op een aangenamere manier.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="MYYrxEB" data-pen-title="score-animation" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYrxEB">
-                  score-animation</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="dPPJrNb"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/dPPJrNb">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.10</span>
+            <p class="chapter-info">
+              Dit zal een iets langer stukje code zijn. Maar deze code heeft
+              allemaal te maken met hoe de elementen binnen in het venster, waar
+              je je score kan ingeven, eruit zullen zien.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">4.11</span>
-          <p class="chapter-info">We moeten nu ook nog de knoppen van het scorebord zelf een styling geven.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="wBBpOyq" data-pen-title="score-buttons/ain" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/wBBpOyq">
-                  score-buttons/ain</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="yyypwMj"
+                data-pen-title="score-modal/inputs"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/yyypwMj">
+                    score-modal/inputs</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Deze code zorgt er ook voor dat onze knoppen zullen reageren als
+              je erover gaat met de muis. Met het :hover pseudo-element zorgen
+              we er dus voor dat de achtergrondkleur verandert en het iets
+              groter zal worden.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Bemerk ook dat we hier weer een :hover pseudo-element hebben gebruikt, voor de functionaliteit van de knop als je erover gaat met de muis.</p>
-        </li>
-        <li class="list__item">
-          <p class="chapter-info">Dat is dan ook al klaar! Op naar de volgende stap.</p>
-        </li>
-      </ul>
-    </section>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.11</span>
+            <p class="chapter-info">
+              We maken nu ook een animatie aan, zodat we het scherm zien
+              verschijnen op een aangenamere manier.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="MYYrxEB"
+                data-pen-title="score-animation"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/MYYrxEB">
+                    score-animation</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">4.11</span>
+            <p class="chapter-info">
+              We moeten nu ook nog de knoppen van het scorebord zelf een styling
+              geven.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="css"
+                data-slug-hash="wBBpOyq"
+                data-pen-title="score-buttons/ain"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/wBBpOyq">
+                    score-buttons/ain</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Bemerk ook dat we hier weer een :hover pseudo-element hebben
+              gebruikt, voor de functionaliteit van de knop als je erover gaat
+              met de muis.
+            </p>
+          </li>
+          <li class="list__item">
+            <p class="chapter-info">
+              Dat is dan ook al klaar! Op naar de volgende stap.
+            </p>
+          </li>
+        </ul>
+      </section>
 
-    <section class="chapter-container">
-      <strong class="chapter">Stap 5: Functionaliteit met JavaScript</strong>
-      <p>Volgende deeltje is tevens ook het moeilijkste! We gaan beginnen aan de functionaliteit van heel het spel. Hiervoor gaan we de codetaal JavaScript gebruiken.</p>
-      <ul class="list">
-        <li class="list__item"><span class="chapter-step">5.1</span>
-          <p class="chapter-info">We maken verschillende nieuwe bestanden aan in onze js folder. Hier maken we de volgende bestanden aan:
-          </p>
-          <ul class="list">
-            <li class="list__item">"_cursor.js"</li>
-            <li class="list__item">"_home-screen.js"</li>
-            <li class="list__item">"_scoreboard.js"</li>
-            <li class="list__item">"_timer.js"</li>
-            <li class="list__item">"game.js"</li>
-            <li class="list__item">"scoreboard.js"</li>
-          </ul>
-          <img class="chapter__image small" src="../src/assets/images/js-files.jpg" alt="">
-        </li>
-        <li class="list__item"><span class="chapter-step">5.2</span>
-          <p class="chapter-info">In "_cursor.js" zetten we volgende code</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="pvvpmOe" data-pen-title="game-cursor" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/pvvpmOe">
-                  game-cursor</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+      <section class="chapter-container">
+        <strong class="chapter">Stap 5: Functionaliteit met JavaScript</strong>
+        <p>
+          Volgende deeltje is tevens ook het moeilijkste! We gaan beginnen aan
+          de functionaliteit van heel het spel. Hiervoor gaan we de codetaal
+          JavaScript gebruiken.
+        </p>
+        <ul class="list">
+          <li class="list__item">
+            <span class="chapter-step">5.1</span>
+            <p class="chapter-info">
+              We maken verschillende nieuwe bestanden aan in onze js folder.
+              Hier maken we de volgende bestanden aan:
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">
-            Deze code zal ervoor zorgen dat als we op onze mol of bever slaan, het hamertje naar beneden zal gaan. <br>
-            Om het heel gemakkelijk te stellen, zijn het eigenlijk twee foto's van een verschillende positie van een hamertje. <br>
-            Met het drukken op de knop zal het spel weten dat het moet veranderen van foto.
-          </p>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.3</span>
-          <p class="chapter-info">Het volgende dat belangrijk is, is dat onze koppen op de homescreen een soort functionaliteit hebben. Namelijk een "click eventListener". <br>
-            Deze zal reageren wanneer er geklikt zal zijn op een van de knoppen. Kopieer deze code in het "_home-screen.js" bestand.
-          </p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="emmywoo" data-pen-title="homescr-buttons" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/emmywoo">
-                  homescr-buttons</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <ul class="list">
+              <li class="list__item">"_cursor.js"</li>
+              <li class="list__item">"_home-screen.js"</li>
+              <li class="list__item">"_scoreboard.js"</li>
+              <li class="list__item">"_timer.js"</li>
+              <li class="list__item">"game.js"</li>
+              <li class="list__item">"scoreboard.js"</li>
+            </ul>
+            <img
+              class="chapter__image small"
+              src="../src/assets/images/js-files.jpg"
+              alt=""
+            />
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.2</span>
+            <p class="chapter-info">In "_cursor.js" zetten we volgende code</p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="pvvpmOe"
+                data-pen-title="game-cursor"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/pvvpmOe">
+                    game-cursor</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Deze code zal ervoor zorgen dat als we op onze mol of bever slaan,
+              het hamertje naar beneden zal gaan. <br />
+              Om het heel gemakkelijk te stellen, zijn het eigenlijk twee foto's
+              van een verschillende positie van een hamertje. <br />
+              Met het drukken op de knop zal het spel weten dat het moet
+              veranderen van foto.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info">Op de eerste twee lijnen code halen we een element op vanuit het DOM, dit is u webpagina.</p>
-          <p class="chapter-info last">We moeten deze ophalen, zodat we iets met de elementen kunnen doen; zoals bv een click eventListener toevoegen.</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.4</span>
-          <p class="chapter-info">We zullen nu overgaan naar het spel zelf! <br>
-            Je mag deze code plakken in het "game.js" bestand.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="YPPYmEr" data-pen-title="game-js-1" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/YPPYmEr">
-                  game-js-1</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.3</span>
+            <p class="chapter-info">
+              Het volgende dat belangrijk is, is dat onze koppen op de
+              homescreen een soort functionaliteit hebben. Namelijk een "click
+              eventListener". <br />
+              Deze zal reageren wanneer er geklikt zal zijn op een van de
+              knoppen. Kopieer deze code in het "_home-screen.js" bestand.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info">We maken variablen aan met daarin informatie dat de code kan onthouden. (const , let) <br>
-            Je mag dit vergelijken met een schuifje in een kast met daarin een iets dat moet onthouden worden. <br>
-            Het programma zal hierin kijken, en weten wat erin zit.</p>
-          <p class="chapter-info last">We maken ook een "click eventListener" weer aan zodat we de bevers kunnen aanklikken. <br>
-            Deze zal er voor zorgen dat de bever verdwijnt na het aanklikken, de score verhogen met 1 en de score ook verversen met de nieuwe score, als je juist hebt geklikt uiteraard. </p>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.5</span>
-          <p class="chapter-info">In het volgende deel code, maken we een switch-case en een functie aan.</p>
-          <p class="chapter-info"> Wat is een functie? Wel een functie is zoals een instructiekaartje. Stel je voor dat je telkens weer iets opnieuw moet doen, moet je dit maar 1 keer opschrijven en kan je de functie zelf meerdere keren oproepen. </p>
-          <p class="chapter-info">En een switch-case daarintegen? Wel dit is een soort van keuzemenu. Doordat we een functie aanmaken dat een willekeurig nummer aanmaakt en doorgeeft aan de switch-case, we ook een andere situatie doorkrijgen. Zo kunnen we de mol/bever op verschillende plaatsen laten verschijnen op het spelbord.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="XJJVvGj" data-pen-title="game-js-switch" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/XJJVvGj">
-                  game-js-switch</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="emmywoo"
+                data-pen-title="homescr-buttons"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/emmywoo">
+                    homescr-buttons</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info">
+              Op de eerste twee lijnen code halen we een element op vanuit het
+              DOM, dit is u webpagina.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Op het einde staat er ook een functie die onze inhoud van de webpagina ververst die we later in de code zullen aanroepen</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.6</span>
-          <p class="chapter-info">Nu moeten we nog nog de gameloop starten. We maken weer variablen aan en maken enkele functies aan.</p>
-          <p class="chapter-info">We moeten ervoor zorgen dat de speler een startschot krijgt voor zijn spel. Dus we maken hier een Timer die naar beneden zal tellen van 3.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="XJJZmWY" data-pen-title="game-js-gamestart" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/XJJZmWY">
-                  game-js-gamestart</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="chapter-info last">
+              We moeten deze ophalen, zodat we iets met de elementen kunnen
+              doen; zoals bv een click eventListener toevoegen.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.7</span>
-          <p class="chapter-info">Bij de start van het spel moet je score 0 zijn en de hoeveelheid tijd moet ook al ingesteld zijn.</p>
-          <p class="chapter-info">In het volgende stuk code stellen we onze score gelijk aan 0 en maken we een timer die ons, in dit geval, 18sec zal geven.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="emmVpyP" data-pen-title="game-js-startgm" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/emmVpyP">
-                  game-js-startgm</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.4</span>
+            <p class="chapter-info">
+              We zullen nu overgaan naar het spel zelf! <br />
+              Je mag deze code plakken in het "game.js" bestand.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-
-        </li>
-        <li class="list__item"><span class="chapter-step">5.8</span>
-          <p>Nadat onze tijd is afgelopen, en we een heleboel mollen of bevers hoofdpijn hebben bezorgd, moet er een scherm tevoorschijn komen waar we onze score in kunnen geven. Daarna moet ook het scorebord op het scherm verschijnen.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="jEEZbex" data-pen-title="game-js-endgm" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/jEEZbex">
-                  game-js-endgm</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="YPPYmEr"
+                data-pen-title="game-js-1"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/YPPYmEr">
+                    game-js-1</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info">
+              We maken variablen aan met daarin informatie dat de code kan
+              onthouden. (const , let) <br />
+              Je mag dit vergelijken met een schuifje in een kast met daarin een
+              iets dat moet onthouden worden. <br />
+              Het programma zal hierin kijken, en weten wat erin zit.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.9</span>
-          <p class="chapter-info">Op het scorebord heb je normaal 3 knoppen: restart, exit en tutorial.</p>
-          <p class="chapter-info">We moeten functionaliteit geven aan deze knoppen. Voor jou spel moet er geen tutorial knop bij staan natuurlijk. <br>
-            Plak deze code maar in het "scoreboard.js" bestand.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="XJJZNVa" data-pen-title="scorebrd-buttonsfunc" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/XJJZNVa">
-                  scorebrd-buttonsfunc</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="chapter-info last">
+              We maken ook een "click eventListener" weer aan zodat we de bevers
+              kunnen aanklikken. <br />
+              Deze zal er voor zorgen dat de bever verdwijnt na het aanklikken,
+              de score verhogen met 1 en de score ook verversen met de nieuwe
+              score, als je juist hebt geklikt uiteraard.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-          <p class="chapter-info last">Normaal gezien werken nu de knoppen te herstarten en de knop om terug naar de home pagina te gaan.</p>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.10</span>
-          <p class="chapter-info">De volgende stap zal erin bestaan om een kleine database te maken die enkel lokaal werkt.</p>
-          <p class="chapter-info">Hier maken we variablen aan om onze scores bij te houden in het lokaal geheugen.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="ZYYrBPX" data-pen-title="scorebrd-highscrs" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/ZYYrBPX">
-                  scorebrd-highscrs</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.5</span>
+            <p class="chapter-info">
+              In het volgende deel code, maken we een switch-case en een functie
+              aan.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.11</span>
-          <p class="chapter-info">We maken nu een fucntie aan waar we andere logica stap per stap zullen in zetten.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="pvvaezx" data-pen-title="scorebrd-fnctStart" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/pvvaezx">
-                  scorebrd-fnctStart</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="chapter-info">
+              Wat is een functie? Wel een functie is zoals een
+              instructiekaartje. Stel je voor dat je telkens weer iets opnieuw
+              moet doen, moet je dit maar 1 keer opschrijven en kan je de
+              functie zelf meerdere keren oproepen.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.12</span>
-          <p class="chapter-info">We maken variablen aan waar we een object uit onze webpagina ophalen en stellen ze gelijk aan iets dat leeg is.</p>
-          <p class="chapter-info">We maken ook een functie die je positie terug geeft als je in de top 3 staat!</p>
-          <p class="chapter-info">Deze code mag ja plakken in de plaats van de comment "// hier komt nog logica".</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="MYYQpwL" data-pen-title="scorebrd-fnc/start" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYQpwL">
-                  scorebrd-fnc/start</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="chapter-info">
+              En een switch-case daarintegen? Wel dit is een soort van
+              keuzemenu. Doordat we een functie aanmaken dat een willekeurig
+              nummer aanmaakt en doorgeeft aan de switch-case, we ook een andere
+              situatie doorkrijgen. Zo kunnen we de mol/bever op verschillende
+              plaatsen laten verschijnen op het spelbord.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.13</span>
-          <p class="chapter-info">In het volgende stuk code zorgen we ervoor dat de scores worden gesorteerd en toegevoegd aan het scorebord.</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="wBByJNR" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/wBByJNR">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="XJJVvGj"
+                data-pen-title="game-js-switch"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/XJJVvGj">
+                    game-js-switch</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Op het einde staat er ook een functie die onze inhoud van de
+              webpagina ververst die we later in de code zullen aanroepen
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.14</span>
-          <p class="chapter-info">We maken nu nog een functie die de speler zijn positie gaan ophalen, deze kan je na de laatste accolade erbij plakken</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="azzqWrK" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/azzqWrK">
-                  Untitled</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.6</span>
+            <p class="chapter-info">
+              Nu moeten we nog nog de gameloop starten. We maken weer variablen
+              aan en maken enkele functies aan.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.15</span>
-          <p class="chapter-info">Deze laatste functie zal er voor zorgen dat je een highscore kan toevoegen!</p>
-          <div class="codepen">
-            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="qEExjbg" data-pen-title="scorebrd-addHscr" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/qEExjbg">
-                  scorebrd-addHscr</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="chapter-info">
+              We moeten ervoor zorgen dat de speler een startschot krijgt voor
+              zijn spel. Dus we maken hier een Timer die naar beneden zal tellen
+              van 3.
             </p>
-            <script async src="https://public.codepenassets.com/embed/index.js"></script>
-          </div>
-        </li>
-        <li class="list__item"><span class="chapter-step">5.16</span>
-          <p class="chapter-info">He..He.. dat was nogal een klus! Op dit punt zou je een volledig functioneel Whack-a-Mole spel gemaakt.</p>
-          <p class="chapter-info last">Je kan nu ook je vrienden of familie uitdagen voor een rondje mollen of bevers op hun hoofd te kloppen.</p>
-        </li>
-      </ul>
-    </section>
-
-  </main>
-</body>
-
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="XJJZmWY"
+                data-pen-title="game-js-gamestart"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/XJJZmWY">
+                    game-js-gamestart</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.7</span>
+            <p class="chapter-info">
+              Bij de start van het spel moet je score 0 zijn en de hoeveelheid
+              tijd moet ook al ingesteld zijn.
+            </p>
+            <p class="chapter-info">
+              In het volgende stuk code stellen we onze score gelijk aan 0 en
+              maken we een timer die ons, in dit geval, 18sec zal geven.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="emmVpyP"
+                data-pen-title="game-js-startgm"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/emmVpyP">
+                    game-js-startgm</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.8</span>
+            <p>
+              Nadat onze tijd is afgelopen, en we een heleboel mollen of bevers
+              hoofdpijn hebben bezorgd, moet er een scherm tevoorschijn komen
+              waar we onze score in kunnen geven. Daarna moet ook het scorebord
+              op het scherm verschijnen.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="jEEZbex"
+                data-pen-title="game-js-endgm"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/jEEZbex">
+                    game-js-endgm</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.9</span>
+            <p class="chapter-info">
+              Op het scorebord heb je normaal 3 knoppen: restart, exit en
+              tutorial.
+            </p>
+            <p class="chapter-info">
+              We moeten functionaliteit geven aan deze knoppen. Voor jou spel
+              moet er geen tutorial knop bij staan natuurlijk. <br />
+              Plak deze code maar in het "scoreboard.js" bestand.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="XJJZNVa"
+                data-pen-title="scorebrd-buttonsfunc"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/XJJZNVa">
+                    scorebrd-buttonsfunc</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+            <p class="chapter-info last">
+              Normaal gezien werken nu de knoppen te herstarten en de knop om
+              terug naar de home pagina te gaan.
+            </p>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.10</span>
+            <p class="chapter-info">
+              De volgende stap zal erin bestaan om een kleine database te maken
+              die enkel lokaal werkt.
+            </p>
+            <p class="chapter-info">
+              Hier maken we variablen aan om onze scores bij te houden in het
+              lokaal geheugen.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="ZYYrBPX"
+                data-pen-title="scorebrd-highscrs"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/ZYYrBPX">
+                    scorebrd-highscrs</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.11</span>
+            <p class="chapter-info">
+              We maken nu een fucntie aan waar we andere logica stap per stap
+              zullen in zetten.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="pvvaezx"
+                data-pen-title="scorebrd-fnctStart"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/pvvaezx">
+                    scorebrd-fnctStart</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.12</span>
+            <p class="chapter-info">
+              We maken variablen aan waar we een object uit onze webpagina
+              ophalen en stellen ze gelijk aan iets dat leeg is.
+            </p>
+            <p class="chapter-info">
+              We maken ook een functie die je positie terug geeft als je in de
+              top 3 staat!
+            </p>
+            <p class="chapter-info">
+              Deze code mag ja plakken in de plaats van de comment "// hier komt
+              nog logica".
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="MYYQpwL"
+                data-pen-title="scorebrd-fnc/start"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/MYYQpwL">
+                    scorebrd-fnc/start</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.13</span>
+            <p class="chapter-info">
+              In het volgende stuk code zorgen we ervoor dat de scores worden
+              gesorteerd en toegevoegd aan het scorebord.
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="wBByJNR"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/wBByJNR">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.14</span>
+            <p class="chapter-info">
+              We maken nu nog een functie die de speler zijn positie gaan
+              ophalen, deze kan je na de laatste accolade erbij plakken
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="azzqWrK"
+                data-pen-title="Untitled"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/azzqWrK">
+                    Untitled</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.15</span>
+            <p class="chapter-info">
+              Deze laatste functie zal er voor zorgen dat je een highscore kan
+              toevoegen!
+            </p>
+            <div class="codepen">
+              <p
+                class="codepen"
+                data-height="300"
+                data-default-tab="js"
+                data-slug-hash="qEExjbg"
+                data-pen-title="scorebrd-addHscr"
+                data-user="lopi5639"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/lopi5639/pen/qEExjbg">
+                    scorebrd-addHscr</a
+                  >
+                  by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://public.codepenassets.com/embed/index.js"
+              ></script>
+            </div>
+          </li>
+          <li class="list__item">
+            <span class="chapter-step">5.16</span>
+            <p class="chapter-info">
+              He..He.. dat was nogal een klus! Op dit punt zou je een volledig
+              functioneel Whack-a-Mole spel gemaakt.
+            </p>
+            <p class="chapter-info last">
+              Je kan nu ook je vrienden of familie uitdagen voor een rondje
+              mollen of bevers op hun hoofd te kloppen.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
