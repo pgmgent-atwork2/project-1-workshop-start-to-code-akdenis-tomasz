@@ -16,7 +16,7 @@
 <body>
   <!-- HEADER -->
   <header class="header">
-    <h1 class="title"><a href="index.html">Whack A Beaver</a></h1>
+    <h1 class="title"><a href="../index.html">Whack A Beaver</a></h1>
     <nav class="nav">
       <ul class="nav__list">
         <li><a class="nav__list-item" id="game" href="game.html">Game</a></li>
@@ -49,21 +49,23 @@
         Je kan deze downloaden van de bovenstaande link</p>
       <ul class="list">
         <li class="list__item"><span class="chapter-step">1.1</span>
-          <p>Hier kan je de bronbestanden vinden! <a href="https://www.dropbox.com/scl/fi/m3etgonaw8ifrp4ska9y2/start-to-code.zip?rlkey=kg6ovu0dj1dr36w6jw49daail&st=5dxe6y9t&dl=0" download>
+          <p>Hier kan je de bronbestanden vinden! <a href="https://www.dropbox.com/scl/fi/m3etgonaw8ifrp4ska9y2/start-to-code.zip?rlkey=kg6ovu0dj1dr36w6jw49daail&st=5dxe6y9t&dl=1" download>
               Download Project ZIP
             </a></p>
+          <p>Je kan deze uitpakken en in een folder plaatsen.</p>
+          <p>We hebben je voorzien van enkele basisstijlen in CSS en onze main.js, die geïmporteerde bestanden heeft. Deze zullen nog wel nader uitgelegd worden, maar de rest zal aan jou zijn.</p>
         </li>
         <li class="list__item"><span class="chapter-step">1.2</span>
-          <p>Open het programma Visual Studio Code en open de folder die je zopas hebt gedownload.</p>
-          <p>Je folderstructuur zou er nu zo moeten uitzien.</p>
+          <p class="chapter-info">Open het programma Visual Studio Code en open de folder die je zopas hebt gedownload.</p>
+          <p class="chapter-info">Je folderstructuur zou er nu zo moeten uitzien.</p>
           <img class="chapter__image small" src="../src/assets/images/folder-struc.png" alt="">
         </li>
         <li class="list__item"><span class="chapter-step">1.3</span>
-          <p>Installeer de live server extensie in Visual Studio Code; die ziet er zo uit:</p>
+          <p class="chapter-info">Installeer de live server extensie in Visual Studio Code; die ziet er zo uit:</p>
           <img class="chapter__image" src="../src/assets/images/live-server.jpg" alt="">
         </li>
-        <li class="list__item"><span>1.4</span>
-          <p>Je kan nu de LiveServer starten door met je rechter muisknop te klikken op "index.html" en vervolgens "Open with live server" te kiezen.</p>
+        <li class="list__item"><span class="chapter-step">1.4</span>
+          <p class="chapter-info">Je kan nu de LiveServer starten door met je rechter muisknop te klikken op "index.html" en vervolgens "Open with live server" te kiezen.</p>
           <img class="chapter__image small" src=" ../src/assets/images/open-liveS.jpg" alt="">
         </li>
       </ul>
@@ -150,9 +152,9 @@
             <script async src="https://public.codepenassets.com/embed/index.js"></script>
           </div>
           <p class="chapter-info">Hier gebruiken we ook een pseudo-element. Dit wil zeggen dat we een effectje kunnen plaatsen, zoals :hover</p>
-          <p class="chapter-info last">Hover gebruik je als je met je muis over iets gaat een effect moet plaatsnemen.</p>
+          <p class="chapter-info last">:Hover gebruik je wanneer je met je muis over iets gaat en er een effect moet plaatsvinden, zoals de kleur van de achtergrond die moet veranderen of de schaal van de knop die groter of kleiner wordt.</p>
         </li>
-        <p class="chapter-info last"><strong class="chapter-step">Proficiat</strong> je eerste werkende pagina is klaar!</p>
+        <p class="chapter-info last"><strong class="chapter-step">Joepie!</strong> Je eerste pagina is opgesteld en ziet er al veel beter uit!</p>
       </ul>
     </section>
 
@@ -387,7 +389,7 @@
         </pre>
         </li>
         <li class="list__item"><span class="chapter-step">4.6</span>
-          <p class="chapter-info">Nu maken we een nieuw bestand aan in de CSS folder met de naam: "_scoreboard.css"</p>
+          <p class="chapter-info">Nu maken we een nieuw bestand aan in de CSS folder met de naam: "leaderboard.css"</p>
           <img class="chapter__image small" src="../src/assets/images/score-board.jpg" alt="">
         </li>
         <li class="list__item"><span class="chapter-step">4.7</span>
@@ -470,15 +472,22 @@
     <section class="chapter-container">
       <strong class="chapter">Stap 5: Functionaliteit met JavaScript</strong>
       <p>Volgende deeltje is tevens ook het moeilijkste! We gaan beginnen aan de functionaliteit van heel het spel. Hiervoor gaan we de codetaal JavaScript gebruiken.</p>
+      <p>Het belangrijkste hier is dat je in elk html bestand een lijntje code moet toevoegen. Dit omdat anders onze code niet weet waar hij de functionaliteit uit moet halen. Net zoals bij de CSS moet onze JavaScript ook verbonden worden met de HTML. Dit do je door volgende code vlak voor de sluitings tag van body te plaatsen: <strong> &lt;/body&gt; </strong></p>
+      <pre>
+        <code>
+          &lt;script src=&quot;./src/js/main.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
+        </code>
+      </pre>
+      <p>Zo dus:</p>
+      <img class="chapter__image small" src="../src/assets/images/js-insert.jpg" alt="">
       <ul class="list">
         <li class="list__item"><span class="chapter-step">5.1</span>
           <p class="chapter-info">We maken verschillende nieuwe bestanden aan in onze js folder. Hier maken we de volgende bestanden aan:
           </p>
           <ul class="list">
-            <li class="list__item">"_cursor.js"</li>
-            <li class="list__item">"_home-screen.js"</li>
-            <li class="list__item">"_scoreboard.js"</li>
-            <li class="list__item">"_timer.js"</li>
+            <li class="list__item">"cursor.js"</li>
+            <li class="list__item">"home-screen.js"</li>
+            <li class="list__item">"leaderboard.js"</li>
             <li class="list__item">"game.js"</li>
             <li class="list__item">"scoreboard.js"</li>
           </ul>
