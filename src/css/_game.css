@@ -49,9 +49,14 @@
 }
 
 .beaver {
-  background-color: rgb(209, 209, 209);
-  width: 50px;
-  height: 75px;
+  all: unset;
+  display: block;
+  width: 6.25rem;
+  height: 4.6875rem;
+  background-image: url("../assets/images/beaver.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
   align-self: end;
 }
 
@@ -94,4 +99,10 @@
 .hole-i {
   grid-column: 3/4;
   grid-row: 4/5;
+}
+
+/* SCORE + TiME */
+.score,
+.time {
+  color: #0b0b0b;
 }
