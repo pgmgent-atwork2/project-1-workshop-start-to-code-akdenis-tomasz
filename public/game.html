@@ -1,65 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whack-a-Mole</title>
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
-    <!-- STYLING -->
-    <link rel="stylesheet" href="../src/css/main.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whack-a-Mole</title>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
+  <!-- STYLING -->
+  <link rel="stylesheet" href="../src/css/main.css" />
 </head>
-  <body>
-    <header class="header">
-      <h1 class="title"><a href="./index.html">Whack A Beaver</a></h1>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a class="nav__list-item" id="game" href="./game.html">Game</a></li>
-          <li>
-            <a class="nav__list-item" id="tutorial" href="./tutorial.html"
-              >Tutorial</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="background" id="game">
-      <div class="background__container">
-        <div class="grid game-container">
-          <img
-            class="background__image"
-            src="../src/assets/images/bg_game.png"
-            alt=""
-          />
-          <div class="score">Score: 0</div>
-          <div class="time">Time: <span id="time-remaining">18</span>s</div>
+<body style="height: 100dvh;">
+  <header class="header">
+    <h1 class="title"><a href="../index.html">Whack A Beaver</a></h1>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li>
+          <a class="nav__list-item" id="game" href="./game.html">Game</a>
+        </li>
+        <li>
+          <a class="nav__list-item" id="tutorial" href="./tutorial.html">Tutorial</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-          <div class="grid fullwidth"></div>
+  <main class="background" id="game">
+    <div class="background__container">
+      <div class="grid game-container">
+        <img class="background__image" src="../src/assets/images/bg_game.png" alt="" />
+        <div class="score">Score: 0</div>
+        <div class="time">Time: <span id="time-remaining">18</span>s</div>
 
-        </div>
-      </div>
-    </main>
-
-    <!-- SCORE - MODAL -->
-    <div id="score-modal" class="modal" style="display: none">
-      <div class="modal-content">
-        <p>Your score: <span id="final-score"></span></p>
-        <input
-          type="text"
-          id="player-name"
-          maxlength="6"
-          placeholder="Enter name (max 6 letters)"
-        />
-        <button id="save-score">Save Score</button>
+        <div class="grid fullwidth"></div>
       </div>
     </div>
+  </main>
 
-    <footer>&copy; 2025 Tomasz & Akdenis</footer>
+  <!-- SCORE - MODAL -->
+  <div id="score-modal" class="modal" style="display: none">
+    <div class="modal-content">
+      <p>Your score: <span id="final-score"></span></p>
+      <input type="text" id="player-name" maxlength="6" placeholder="Enter name (max 6 letters)" />
+      <button id="save-score">Save Score</button>
+    </div>
+  </div>
 
-    <script src="../src/js/game.js" type="module"></script>
-  </body>
+  <footer>&copy; 2025 Tomasz & Akdenis</footer>
+
+  <script src="../src/js/game.js" type="module"></script>
+</body>
+
 </html>

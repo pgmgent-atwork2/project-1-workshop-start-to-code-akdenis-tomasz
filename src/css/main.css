@@ -15,7 +15,6 @@ body {
   justify-content: center;
   align-items: center;
   width: auto;
-  // height: 100dvh;
   transition: transform 0.1s;
   background-color: #000000;
   color: #fff;
