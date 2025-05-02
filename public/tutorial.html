@@ -33,7 +33,7 @@
         We gaan een spel maken waarbij de gebruiker via de muis, bevers zal moeten aanklikken en zo punten te scoren.
         Zo ga je punten scoren, en kan je het openen tegen vrienden of familie!
       </p>
-      <!-- <img src="image" alt=""> -->
+      <img class="chapter__image" src="../src/assets/images/game.jpg" alt="">
       <p>Hiervoor gaan we 3 codetalen gebruiken</p>
       <ul class="list">
         <li>HTML</li>
@@ -48,31 +48,106 @@
       <p>Om deze applicatie te bouwen gaan we een tool gebruiken: <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener noreferrer">Visual Studio Code</a><br>
         Je kan deze downloaden van de bovenstaande link</p>
       <ul class="list">
-        <li class="list__item"><span>1.1</span>
-          Hier kan je de bronbestanden vinden!
-          <!-- <a href="#">Download bronbestanden</a> -->
+        <li class="list__item"><span class="chapter-step">1.1</span>
+          <p>Hier kan je de bronbestanden vinden! <a href="https://www.dropbox.com/scl/fi/m3etgonaw8ifrp4ska9y2/start-to-code.zip?rlkey=kg6ovu0dj1dr36w6jw49daail&st=5dxe6y9t&dl=0" download>
+              Download Project ZIP
+            </a></p>
         </li>
-        <li class="list__item"><span>1.2</span>
-          Open het programma Visual Studio Code. en open de folder die je zopas aangemaakt hebt.
-          <!-- <img src="" alt=""> -->
+        <li class="list__item"><span class="chapter-step">1.2</span>
+          <p>Open het programma Visual Studio Code en open de folder die je zopas hebt gedownload.</p>
+          <p>Je folderstructuur zou er nu zo moeten uitzien.</p>
+          <img class="chapter__image small" src="../src/assets/images/folder-struc.png" alt="">
         </li>
-        <li class="list__item"><span>1.3</span>
-          Installeer de live server extensie in Visual Studio Code; die ziet er zo uit:
-          <!-- <img src="" alt=""> -->
+        <li class="list__item"><span class="chapter-step">1.3</span>
+          <p>Installeer de live server extensie in Visual Studio Code; die ziet er zo uit:</p>
+          <img class="chapter__image" src="../src/assets/images/live-server.jpg" alt="">
         </li>
         <li class="list__item"><span>1.4</span>
-          Je kan nu de LiveServer starten door met je rechter muisknop te klikken op "index.html" en vervolgens "Open with live server" te kiezen.
+          <p>Je kan nu de LiveServer starten door met je rechter muisknop te klikken op "index.html" en vervolgens "Open with live server" te kiezen.</p>
+          <img class="chapter__image small" src=" ../src/assets/images/open-liveS.jpg" alt="">
         </li>
       </ul>
     </section>
 
     <section class="chapter-container">
       <strong class="chapter">Stap 2 - HTML en CSS</strong>
-      <p class="chapter-info first">Tijd om ons spel mooi te maken en ons canvas een likje "code-verf" te geven, zodat we meer zien dan enkel een witte pagina.</p>
+      <p>We gaan nu onze HTML opstellen - Dit wil zeggen dat we onze webpagina gaan vullen met zichtbare elementen.</p>
+      <ul class="list">
+        <li class="list__item"><span class="chapter-step">2.1</span>
+          <p>We beginnen met een index.html aan te maken in onze "public" folder.</p>
+          <img class="chapter__image" src="../src/assets/images/index.jpg" alt="">
+        </li>
+        <li class="list__item"><span class="chapter-step">2.1</span>
+          <p class="chapter-info">Hier kan je "!" drukken en enter. Je zou normaal dit krijgen.</p>
+
+          <img class="chapter__image" src="../src/assets/images/index-start.jpg" alt="">
+          <p class="chapter-info last">Dit is wat we noemen het DOCTYPE. Elke HTML pagina begint altijd zo!</p>
+          <p class="chapter-info last">Dit is de basis-structuur waar we op zullen verder werken.</p>
+        </li>
+        <li class="list__item"><span class="chapter-step">2.1</span>
+          <p class="chapter-info">We gaan hem nu vullen met verschillende items, zodat onze webpagina vorm zal krijgen. Je kan onderstaande code kopiëren en plakken tussen de body tags.</p>
+          <div class="codepen">
+            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="gbbvQma" data-pen-title="index-start" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/gbbvQma">
+                  index-start</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          </div>
+          <p class="chapter-info last">In het resultaat kan je zien dat je een titel en 2 knoppen hebt.</p>
+        </li>
+        <li class="list__item"><span class="chapter-step">2.1</span>
+          <p class="chapter-info">Ja kan ook zien dat er per lijn code een "class" attribuut staat opgegeven. Deze gaan we later gebruiken om onze elementen een styling te geven. Met andere woorden we gaan het mooi maken. Zo zou je pagina er momenteel moeten uitzien.</p>
+          <img class="chapter__image" src="../src/assets/images/index-look.jpg" alt="">
+        </li>
+        <li class="list__item"><span class="chapter-step">2.1</span>
+          <p class="chapter-info">Tijd om ons spel mooi te maken en ons canvas een likje "code-verf" te geven, zodat we meer zien dan enkel een witte pagina.</p>
+          <p class="chapter-info">Om een webpagina op te maken, maken we gebruik van Cascading Style Sheets - CSS - Hier geven wij bepaalde waarden mee voor het stijlen van een webpagina. Herinner je je nog dat er een "class" attribuut stond in de html? Wel, deze gaan we aanspreken om het document stijl te geven.</p>
+          <p class="chapter-info">We moeten ook een lettertype meegeven en het CSS bestand vast hangen aan de HTML. Voeg volgende code toe onder je titel:</p>
+          <div class="codepen">
+            <p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="ZYYrVOP" data-pen-title="homescr-fonts" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/ZYYrVOP">
+                  homescr-fonts</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          </div>
+          <p class="chapter-info">
+            Om het uitzicht te veranderen van onze pagina moeten we eerst een nieuw bestand aanmaken. In de .css map maak je een bestand aan genaamd "home-screen.css" en kopieer je de volgende code in.
+          </p>
+          <img class="chapter__image small" src="../src/assets/images/css-intro.jpg" alt="">
+          <div class="codepen">
+            <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="xbbYmxK" data-pen-title="homescr-css/start" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/lopi5639/pen/xbbYmxK">
+                  homescr-css/start</a> by jeffe (<a href="https://codepen.io/lopi5639">@lopi5639</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
+          </div>
+        </li>
+        <li class="list__item"><span class="chapter-step">2.1</span>
+          <p class="chapter-info">Als je de webpagina bekijkt, zie je dat er niets is verandert. Dat komt omdat we het CSS bestand nog moeten vasthangen aan de html. </p>
+          <p class="chapter-info last">Dit doen we door door volgende code te plakken onder de fonts</p>
+          <pre>
+            <code>
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;../src/css/main.css&quot; /&gt;
+          </code>
+        </pre>
+          <img class=" chapter__image" src="../src/assets/images/index-end.jpg" alt="">
+        </li>
+        <li class="list__item"><span class="chapter-step">2.7</span>
+          <p class="chapter-info">Je pagina zou er zo moeten uitezien momenteel.</p>
+          <img class="chapter__image" src=" ../src/assets/images/index-look2.jpg" alt="">
+        </li>
+        <li class="list__item"><span class="chapter-step">2.7</span>
+          <p>Nu zullen we nog de knoppen stijlel</p>
+        </li>
+      </ul>
+
       <ul class="list">
         <li class="list__item">
           <span class="chapter-step">2.1</span>
-          <p class="chapter-info">Kopieer onderstaande code in jouw index.html-bestand. Bewaar vervolgens dat bestand.</p>
+
           <div class="codepen">
             <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="MYYvRqv" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
               <span>See the Pen <a href="https://codepen.io/lopi5639/pen/MYYvRqv">
@@ -81,14 +156,9 @@
             </p>
             <script async src="https://public.codepenassets.com/embed/index.js"></script>
           </div>
-          <p class="chapter-info last">Dit is de basis-structuur waar we op zullen verder werken.</p>
         </li>
         <li class="list__item">
           <span class="chapter-step">2.2</span>
-          <p class="chapter-info">
-            In onze css folder maken we een nieuwe file aan genaamd "_home-screen.css". <br>
-            In deze file zetten we de volgende code
-          </p>
           <div class="codepen">
             <p class="codepen" data-height="300" data-default-tab="css" data-slug-hash="qEEXwKM" data-pen-title="Untitled" data-user="lopi5639" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
               <span>See the Pen <a href="https://codepen.io/lopi5639/pen/qEEXwKM">
