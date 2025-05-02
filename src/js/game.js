@@ -121,24 +121,21 @@ function endGame(gameInterval, timerInterval) {
 
   const modal = document.getElementById("score-modal");
   const finalScore = document.getElementById("final-score");
-  const saveButton = document.getElementById("save-score");
+  const save = document.getElementById("save-score");
 
   finalScore.textContent = score;
   modal.style.display = "flex";
 
-  const newSaveButton = saveButton.cloneNode(true);
-  saveButton.parentNode.replaceChild(newSaveButton, saveButton);
+  const newSave = save.cloneNode(true);
+  save.parentNode.replaceChild(newSave, save);
 
-  newSaveButton.addEventListener("click", () => {
+  newSave.addEventListener("click", () => {
     const playerNameInput = document.getElementById("player-name");
     let playerName = playerNameInput.value.trim().substring(0, 6);
     if (playerName) {
       const rank = getPlayerRank(score);
-      if (rank) {
-        alert(`Congrats! You’re ranked ${rank} out of 10!`);
-      }
       addHighScore(playerName, score);
-      window.location.href = "scoreboard.html";
+      window.location.href = "./scoreboard.html";
     }
   });
 }
