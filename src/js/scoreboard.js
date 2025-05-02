@@ -9,18 +9,18 @@ const tutorialBtn = document.getElementById("tutorial-btn");
 
 if (restartBtn) {
   restartBtn.addEventListener("click", () => {
-    window.location.href = "game.html?countdown=true";
+    window.location.href = "./game.html?countdown=true";
   });
 }
 
 if (exitBtn) {
   exitBtn.addEventListener("click", () => {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   });
 }
 
 if (tutorialBtn) {
   tutorialBtn.addEventListener("click", () => {
-    window.location.href = "tutorial.html";
+    window.location.href = "./tutorial.html";
   });
 }
