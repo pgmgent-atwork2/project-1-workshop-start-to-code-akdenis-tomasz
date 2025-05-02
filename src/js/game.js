@@ -1,5 +1,5 @@
-import "./_cursor.js";
-import { addHighScore, getPlayerRank } from "./_scoreboard.js";
+import "./cursor.js";
+import { addHighScore, getPlayerRank } from "./leaderboard.js";
 
 // --- GAME VARIABLES ---
 let score = 0;
@@ -26,7 +26,7 @@ function addBeaverClickListener() {
 
 function beaverSelection() {
   let beaverHTML = "";
-  switch (getRandomNumber(1, 10)) { 
+  switch (getRandomNumber(1, 10)) {
     case 1:
       beaverHTML = "<button class='beaver hole-a'></button>";
       break;
@@ -100,8 +100,6 @@ function startCountdown(callback) {
 
 // --- GAME LOOP ---
 function startGame() {
-  score = 0;
-  timeLeft = 18;
   updateScore();
   if ($timeDisplay) $timeDisplay.textContent = timeLeft;
 

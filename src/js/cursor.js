@@ -10,7 +10,7 @@ document.addEventListener("mousedown", () => {
   const sound = sounds[randomIndex];
 
   sound.currentTime = 0;
-  sound.play();;
+  sound.play();
 });
 
 document.addEventListener("mouseup", () => {

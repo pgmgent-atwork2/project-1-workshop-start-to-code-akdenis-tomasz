@@ -1,4 +1,4 @@
-import { renderHighScores } from "./_scoreboard.js";
+import { renderHighScores } from "./leaderboard.js";
 
 renderHighScores();
 
