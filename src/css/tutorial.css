@@ -16,6 +16,18 @@
   margin-bottom: 1.5rem;
 }
 
+.end {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.enhance {
+  background-color: grey;
+}
+
 .page-introduction {
   font-size: 2rem;
   margin-bottom: 1rem;
