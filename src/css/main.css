@@ -26,7 +26,7 @@ body {
 }
 
 html.hammer-active * {
-  cursor: url("../assets/icons/hammer-rotated.png") 16 16, auto;
+  cursor: url("../assets/icons/hammer-rotated.png"), auto;
 }
 
 /* FOOTER */
